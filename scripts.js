@@ -39,59 +39,135 @@ const roles = [
   }
 
   // Start the animation
-  document.addEventListener("DOMContentLoaded", () => {
-    typeEffect();
-  });
+ document.addEventListener("DOMContentLoaded", () => {
+  // ➤ Type effect (if any)
+  if (typeof typeEffect === 'function') typeEffect();
+
+  // ➤ Project Image Sliders
   document.querySelectorAll('.project-images-wrapper').forEach((wrapper) => {
-  const inner = wrapper.querySelector('.project-images-inner');
-  const images = inner.querySelectorAll('img');
-  const dotsContainer = wrapper.querySelector('.dots');
-  let currentIndex = 0;
-  const total = images.length;
-  const wrapperWidth = wrapper.querySelector('.project-images').offsetWidth;
+    const inner = wrapper.querySelector('.project-images-inner');
+    const images = inner.querySelectorAll('img');
+    const dotsContainer = wrapper.querySelector('.dots');
+    let projIndex = 0;
+    const total = images.length;
+    const wrapperWidth = wrapper.querySelector('.project-images').offsetWidth;
 
-  // Set width for inner container and each image
-  inner.style.width = `${wrapperWidth * total}px`;
-  images.forEach(img => {
-    img.style.width = `${wrapperWidth}px`;
-    img.style.flexShrink = '0';
+    inner.style.width = `${wrapperWidth * total}px`;
+    images.forEach(img => {
+      img.style.width = `${wrapperWidth}px`;
+      img.style.flexShrink = '0';
+    });
+
+    for (let i = 0; i < total; i++) {
+      const dot = document.createElement('span');
+      dot.classList.add('dot');
+      dot.addEventListener('click', () => goToImage(i));
+      dotsContainer.appendChild(dot);
+    }
+
+    const dots = dotsContainer.querySelectorAll('span');
+
+    function updateDots() {
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === projIndex);
+      });
+    }
+
+    function goToImage(index) {
+      projIndex = index;
+      inner.style.transform = `translateX(-${wrapperWidth * index}px)`;
+      updateDots();
+      resetTimer();
+    }
+
+    function nextImage() {
+      projIndex = (projIndex + 1) % total;
+      goToImage(projIndex);
+    }
+
+    let timer = setInterval(nextImage, 5000);
+
+    function resetTimer() {
+      clearInterval(timer);
+      timer = setInterval(nextImage, 5000);
+    }
+
+    goToImage(0);
   });
 
-  // Create dots dynamically
-  for (let i = 0; i < total; i++) {
-    const dot = document.createElement('span');
-    dot.classList.add('dot');
-    dot.addEventListener('click', () => goToImage(i));
-    dotsContainer.appendChild(dot);
+  // ➤ Certificate Carousel
+  const container = document.getElementById('certsContainer');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+
+  const cardWidth = 340;
+  const cards = Array.from(container.children);
+  const totalCards = cards.length;
+  let certIndex = 1;
+
+  const firstClone = cards[0].cloneNode(true);
+  const lastClone = cards[totalCards - 1].cloneNode(true);
+  container.insertBefore(lastClone, cards[0]);
+  container.appendChild(firstClone);
+
+  const allCards = container.children;
+  const updatedTotal = allCards.length;
+
+  function setInitialPosition() {
+    const offset = (container.parentElement.offsetWidth / 2) - (cardWidth / 2);
+    container.style.transition = "none";
+    container.style.transform = `translateX(${-certIndex * cardWidth + offset}px)`;
   }
 
-  const dots = dotsContainer.querySelectorAll('span');
+  function updateScroll(animated = true) {
+    const offset = (container.parentElement.offsetWidth / 2) - (cardWidth / 2);
+    container.style.transition = animated ? "transform 0.4s ease" : "none";
+    container.style.transform = `translateX(${-certIndex * cardWidth + offset}px)`;
 
-  function updateDots() {
-    dots.forEach((dot, i) => {
-      dot.classList.toggle('active', i === currentIndex);
+    Array.from(allCards).forEach((card, index) => {
+      card.classList.toggle('active', index === certIndex);
     });
   }
 
-  function goToImage(index) {
-    currentIndex = index;
-    inner.style.transform = `translateX(-${wrapperWidth * index}px)`;
-    updateDots();
-    resetTimer();
+  function scrollNext() {
+    certIndex++;
+    updateScroll();
+    if (certIndex === updatedTotal - 1) {
+      setTimeout(() => {
+        certIndex = 1;
+        updateScroll(false);
+      }, 400);
+    }
   }
 
-  function nextImage() {
-    currentIndex = (currentIndex + 1) % total;
-    goToImage(currentIndex);
+  function scrollPrev() {
+    certIndex--;
+    updateScroll();
+    if (certIndex === 0) {
+      setTimeout(() => {
+        certIndex = totalCards;
+        updateScroll(false);
+      }, 400);
+    }
   }
 
-  let timer = setInterval(nextImage, 5000);
+  nextBtn.addEventListener('click', () => {
+    scrollNext();
+    resetAutoScroll();
+  });
 
-  function resetTimer() {
-    clearInterval(timer);
-    timer = setInterval(nextImage, 5000);
+  prevBtn.addEventListener('click', () => {
+    scrollPrev();
+    resetAutoScroll();
+  });
+
+  let autoScroll = setInterval(scrollNext, 5000);
+
+  function resetAutoScroll() {
+    clearInterval(autoScroll);
+    autoScroll = setInterval(scrollNext, 5000);
   }
 
-  // Initial setup
-  goToImage(0);
+  setInitialPosition();
+  updateScroll(false);
 });

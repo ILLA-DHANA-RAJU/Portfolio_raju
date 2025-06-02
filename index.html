@@ -4,8 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Raju's Portfolio</title>
+  <meta name="description" content="Raju's web development portfolio with projects, skills, and contact info.">
+  <meta name="keywords" content="Raju, Portfolio, Web Developer, Projects, HTML, CSS, JavaScript">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Raju I.">
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/x-icon" href="assets/images/raju.jpg">
+  <link rel="icon" type="image/x-icon" href="assets/images/image.png">
   <script defer src="scripts.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
@@ -16,7 +20,7 @@
   <!-- ======= NAVBAR ======= -->
   <header id="navbar">
     <div class="logo">Dhana Raju Illa</div>
-    <nav class="nav-links">
+    <nav class="nav-links" id="navMenu">
       <a href="#home">Home</a>
       <a href="#about">About Me</a>
       <a href="#skills">Skills</a>
@@ -25,6 +29,7 @@
       <a href="#resume">Resume</a>
       <a href="#contact">Contact</a>
     </nav>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
   </header>
 
   <!-- ======= HERO SECTION ======= -->
@@ -163,25 +168,45 @@
   </div>
 </section>
 
-  <section id="certifications" class="certifications-section" data-aos="fade-up">
-    <h2>Certifications</h2>
-    <div class="certs-container">
+<section id="certifications" class="certifications-section" data-aos="fade-up">
+  <h2>Certifications</h2>
+  <button class="carousel-btn left" id="prevBtn">&#10094;</button>
+    <div class="certs-wrapper">
+      <div class="certs-container" id="certsContainer">
         <div class="cert-card">
-            <img src="assets/certificates/NPTEL Certificate.png" alt="NPTEL Certificate">
-            <h3>NPTEL - The Joy of Computing using Python</h3>
-            <p>Issued by NPTEL | Score: 56%</p>
-        </div>  
-        <div class="cert-card">
-            <img src="assets/certificates/Iot.png" alt="IoT Internship Certificate">
-            <h3>IoT Internship - Ocean Apps Technologies</h3>
-            <p>Designed a heart rate monitoring system with real-time visualization.</p>
-        </div>  
-        <div class="cert-card">
-            <img src="assets/certificates/Web developmen in college.jpg" alt="Full Stack Internship Certificate">
-            <h3>Full Stack Development Internship</h3>
-            <p>Developed a Covid Testing System at VSM College.</p>
+          <img src="assets/certificates/NPTEL Certificate.png" alt="NPTEL Certificate">
+          <h3>NPTEL - The Joy of Computing using Python</h3>
+          <p>Issued by NPTEL | Score: 56%</p>
         </div>
+        <div class="cert-card">
+          <img src="assets/certificates/Iot.png" alt="IoT Internship Certificate">
+          <h3>IoT Internship - Ocean Apps Technologies</h3>
+          <p>Designed a heart rate monitoring system with real-time visualization.</p>
+        </div>
+        <div class="cert-card">
+          <img src="assets/certificates/Web developmen in college.jpg" alt="Full Stack Internship Certificate">
+          <h3>Full Stack Development Internship</h3>
+          <p>Developed a Covid Testing System at VSM College.</p>
+        </div>
+        <div class="cert-card">
+          <img src="assets/certificates/AI.jpg" alt="IoT Internship Certificate">
+          <h3>Fundmental of AI - Ocean Apps Technologies</h3>
+          <p>3-months training classes on Fundamentals on AI of ML and DL basics .</p>
+        </div>
+        <div class="cert-card">
+          <img src="assets/certificates/Freecodecamp.png" alt="IoT Internship Certificate">
+          <h3>Web development - freecodecamp</h3>
+          <p>Completed tasks and getting certification from freecodecamp on responsive web development</p>
+        </div>
+        <div class="cert-card">
+          <img src="assets/certificates/IBM.png" alt="IoT Internship Certificate">
+          <h3>Machine Learning with pyton - IBM</h3>
+          <p>Learning of Machine learning concepts to complete tasks in IBM.</p>
+        </div>
+        <!-- More .cert-card blocks can be added here -->
+      </div>
     </div>
+    <button class="carousel-btn right" id="nextBtn">&#10095;</button>
   </section>
 
   <section id="resume" class="resume-section" data-aos="fade-up">
@@ -217,12 +242,33 @@
     </div> 
   </div>
 </section>
+<hr class="section-divider">
+<footer class="footer">
+  <div class="footer-content">
+    <p>&copy; 2025 Dhana Raju. All Rights Reserved.</p>
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="back-to-top" onclick="scrollToTop()">↑ Back to Top</button>
+  </div>
+</footer>
+
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init({
     duration: 1000,
     once: true
   });
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  function toggleMenu() {
+  document.getElementById("navMenu").classList.toggle("show");
+  document.querySelector(".hamburger").classList.toggle("open");
+}
 </script>
 
 </body>

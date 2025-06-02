@@ -9,7 +9,9 @@
         "ignore": [
           "backdrop-filter",
           "scrollbar-width",
-          "scrollbar-width: none"
+          "scrollbar-width: none",
+          "-webkit-overflow-scrolling",
+          "user-select"
         ]
       }
     ]
