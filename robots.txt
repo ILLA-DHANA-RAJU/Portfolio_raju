@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://illa-dhana-raju.github.io/Portfolio_raju/sitemap.xml

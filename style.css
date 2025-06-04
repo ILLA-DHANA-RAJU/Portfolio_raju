@@ -981,10 +981,11 @@
   }
 
   .project-card {
-    width: 380px;
+    width: 350px;
   }
 
   .project-images {
+    width: 100%;
     height: 180px;
   }
 
