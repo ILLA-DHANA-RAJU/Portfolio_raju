@@ -100,12 +100,13 @@ const roles = [
   const prevBtn = document.getElementById('prevBtn');
   const nextBtn = document.getElementById('nextBtn');
 
-  const cardWidth = 340;
-  const cards = Array.from(container.children);
-  const totalCards = cards.length;
-  let certIndex = 1;
+ 
 
-  
+  // Clone first and last card for infinite loop effect
+  const firstClone = cards[0].cloneNode(true);
+  const lastClone = cards[totalCards - 1].cloneNode(true);
+  container.insertBefore(lastClone, cards[0]);
+  container.appendChild(firstClone);
 
   const allCards = container.children;
   const updatedTotal = allCards.length;
