@@ -95,7 +95,6 @@ const roles = [
     goToImage(0);
   });
 
-
   // ➤ Certificate Carousel
   const container = document.getElementById('certsContainer');
   const prevBtn = document.getElementById('prevBtn');
@@ -106,6 +105,24 @@ const roles = [
   const totalCards = cards.length;
   let certIndex = 1;
 
+  
+
+  const allCards = container.children;
+  const updatedTotal = allCards.length;
+
+  function setInitialPosition() {
+    const offset = (container.parentElement.offsetWidth / 2) - (cardWidth / 2);
+    container.style.transition = "none";
+    container.style.transform = `translateX(${-certIndex * cardWidth + offset}px)`;
+    updateActiveCard();
+  }
+
+  function updateScroll(animated = true) {
+    const offset = (container.parentElement.offsetWidth / 2) - (cardWidth / 2);
+    container.style.transition = animated ? "transform 0.4s ease" : "none";
+    container.style.transform = `translateX(${-certIndex * cardWidth + offset}px)`;
+    updateActiveCard();
+  }
 
   function updateActiveCard() {
     Array.from(allCards).forEach((card, index) => {
@@ -157,4 +174,5 @@ const roles = [
   window.addEventListener('load', () => {
     setInitialPosition();
   });
+
 });
