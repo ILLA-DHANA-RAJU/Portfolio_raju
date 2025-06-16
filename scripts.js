@@ -95,6 +95,7 @@ const roles = [
     goToImage(0);
   });
 
+
   // ➤ Certificate Carousel
   const container = document.getElementById('certsContainer');
   const prevBtn = document.getElementById('prevBtn');
@@ -105,25 +106,8 @@ const roles = [
   const totalCards = cards.length;
   let certIndex = 1;
 
-  const firstClone = cards[0].cloneNode(true);
-  const lastClone = cards[totalCards - 1].cloneNode(true);
-  container.insertBefore(lastClone, cards[0]);
-  container.appendChild(firstClone);
 
-  const allCards = container.children;
-  const updatedTotal = allCards.length;
-
-  function setInitialPosition() {
-    const offset = (container.parentElement.offsetWidth / 2) - (cardWidth / 2);
-    container.style.transition = "none";
-    container.style.transform = `translateX(${-certIndex * cardWidth + offset}px)`;
-  }
-
-  function updateScroll(animated = true) {
-    const offset = (container.parentElement.offsetWidth / 2) - (cardWidth / 2);
-    container.style.transition = animated ? "transform 0.4s ease" : "none";
-    container.style.transform = `translateX(${-certIndex * cardWidth + offset}px)`;
-
+  function updateActiveCard() {
     Array.from(allCards).forEach((card, index) => {
       card.classList.toggle('active', index === certIndex);
     });
@@ -153,21 +137,24 @@ const roles = [
 
   nextBtn.addEventListener('click', () => {
     scrollNext();
-    resetAutoScroll();
+    stopAutoScroll();
   });
 
   prevBtn.addEventListener('click', () => {
     scrollPrev();
-    resetAutoScroll();
+    stopAutoScroll();
   });
 
+  // Auto-scroll logic
   let autoScroll = setInterval(scrollNext, 5000);
 
-  function resetAutoScroll() {
+  function stopAutoScroll() {
     clearInterval(autoScroll);
-    autoScroll = setInterval(scrollNext, 5000);
+    autoScroll = null;
   }
 
-  setInitialPosition();
-  updateScroll(false);
+  // Initial setup after page loads
+  window.addEventListener('load', () => {
+    setInitialPosition();
+  });
 });

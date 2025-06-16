@@ -452,7 +452,7 @@
   overflow-y: visible;      /* allows hover scale to be visible */
   position: relative;
   width: 100%;
-  padding: 40px 0;          /* optional: add space for hover */
+  padding: 40px 70px;          /* optional: add space for hover */
   z-index: 0;               /* make sure it’s behind the cards */
 }
 
@@ -697,15 +697,15 @@
 
 .section-divider {
   border: none;
-  height: 1px;
+  height: 2px;
   background: #242424;
   margin: 0.2px auto 0.2px;
-  width: 80%;
+  width: 100%;
   opacity: 0.6;
 }
 
 .footer {
-  background: #f3f2f2;
+  background: linear-gradient(to right, #dded06, #07a5f5);
   color: #1b1919;
   padding: 40px 20px;
   text-align: center;
@@ -735,7 +735,7 @@
 }
 
 .footer-links a:hover {
-  color: #09afd4;
+  color: #f9fcfc;
 }
 
 .back-to-top {
@@ -751,7 +751,7 @@
 }
 
 .back-to-top:hover {
-  background: #1abedb;
+  background: #f5f7f7;
 }
 
 @media (max-width: 1000px) {
@@ -905,11 +905,8 @@
 
 /* Responsive */
 @media (max-width: 800px) {
-  .nav-links {
-      display: none;
-    }
-  
-   header#navbar {
+  /* 🌐 Navbar */
+  header#navbar {
     flex-wrap: wrap;
     padding: 15px 20px;
   }
@@ -933,8 +930,8 @@
     padding: 20px;
     z-index: 999;
     max-width: 300px;
-    transition: all 0.3s ease;
     backdrop-filter: blur(1px);
+    transition: all 0.3s ease;
   }
 
   .nav-links a {
@@ -945,7 +942,6 @@
 
   .nav-links a:hover {
     color: #060606;
-    background: none;
     box-shadow: 0 0 5px rgba(0, 246, 205, 0.964);
     border-radius: 10px;
     transform: scale(1.03);
@@ -954,16 +950,17 @@
   .nav-links.show {
     display: flex;
   }
-  
+
+  /* 🦸‍♂️ Hero Section */
+  .hero-content {
+    max-width: 100%;
+    text-align: start;
+    color: #fdfdfd;
+  }
+
   .hero-content h1 {
     font-size: 32px;
     color: whitesmoke;
-  }
- 
-  .hero-content {
-    max-width: 100%;
-    color: #fdfdfd;
-    text-align: start;
   }
 
   .hero-content p,
@@ -980,6 +977,7 @@
     padding: 6px 12px;
   }
 
+  /* 💻 Projects Section */
   .project-card {
     width: 350px;
   }
@@ -990,18 +988,42 @@
   }
 
   .project-images img {
+    width: 100%;
     height: 180px;
+    object-fit: cover;
   }
-   .carousel-wrapper {
-    flex-direction: column;
+
+  .project-links {
+    color: #00c2aa;
+    margin: 2px 3px;
+  }
+
+   .certifications-section {
+    padding: 80px 20px;
+  }
+
+  .certifications-section h2 {
+    font-size: 28px;
+    margin-bottom: 50px;
+  }
+
+  .certs-wrapper {
+    padding: 20px 50px;
+  }
+
+  .certs-container {
+    gap: 30px;
   }
 
   .cert-card {
-    width: 303px;
+    width: 280px;
     padding: 16px;
-    scroll-snap-align: start;
   }
-  
+
+  .cert-card img {
+    height: 180px;
+  }
+
   .cert-card h3 {
     font-size: 1rem;
   }
@@ -1011,10 +1033,12 @@
   }
 
   .carousel-btn {
-    font-size: 1.8rem;
+    font-size: 2rem;
+    padding: 8px;
   }
 
-   .resume-section {
+  /* 📄 Resume Section */
+  .resume-section {
     padding: 60px 15px;
   }
 
@@ -1035,6 +1059,8 @@
   .resume-actions .btn {
     max-width: 250px;
   }
+
+  /* 📞 Contact Section */
   .contact-section {
     padding: 40px 20px;
   }
@@ -1051,7 +1077,7 @@
     flex: 1 1 270px;
     margin-top: 30px;
   }
- 
+
   .contact-info p,
   .contact-info a {
     font-size: 16px;
@@ -1062,7 +1088,9 @@
   }
 }
 
-@media (max-width: 400px) {
+
+@media (max-width: 430px) {
+  /* 🌐 Navbar */
   header#navbar {
     padding: 15px 20px;
   }
@@ -1075,11 +1103,10 @@
     position: absolute;
     top: 15px;
     right: 50px;
-    background: #fff;
-    color: white;
     background: rgba(255, 255, 255, 0.064);
+    color: white;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     display: none;
     flex-direction: column;
     align-items: flex-start;
@@ -1097,7 +1124,6 @@
 
   .nav-links a:hover {
     color: #100f0f;
-    background: none;
     box-shadow: 0 0 5px rgba(0, 246, 205, 0.964);
     border-radius: 10px;
     transform: scale(1.03);
@@ -1106,12 +1132,13 @@
   .nav-links.show {
     display: flex;
   }
-  /* 🌟 Hero Section */
+
+  /* 🦸‍♂️ Hero Section */
   .hero-section {
     padding: 60px 20px;
+    text-align: center;
     background-position: center;
     background-size: cover;
-    text-align: center;
   }
 
   .hero-content {
@@ -1141,10 +1168,7 @@
     font-size: 16px;
   }
 
-  .social-icons a {
-    font-size: 20px;
-    margin: 0 8px;
-  }
+  /* 👤 About Section */
   .about-section {
     padding: 50px 20px;
     text-align: center;
@@ -1156,9 +1180,14 @@
   }
 
   .about-image {
-    width: 120px;
-    height: 120px;
+    width: 190px;
+    height: 190px;
     margin-bottom: 20px;
+  }
+
+  .about-image::before {
+    width: 200px;
+    height: 200px;
   }
 
   .about-content {
@@ -1175,22 +1204,14 @@
     line-height: 1.6;
   }
 
-  .about-image img{
-    width: 190px;
-    height: 190px;
-  }
-  .about-image::before {
-    width: 200px;
-    height: 200px;
-  }
-
+  /* 💻 Projects Section */
   .projects-section {
     padding: 50px 20px;
+    text-align: center;
   }
 
   .projects-section h2 {
     font-size: 24px;
-    text-align: center;
   }
 
   .project-cards {
@@ -1202,7 +1223,6 @@
     width: 100%;
     padding: 15px;
     font-size: 14px;
-    text-align: center;
   }
 
   .project-card img {
@@ -1215,64 +1235,58 @@
     font-size: 18px;
   }
 
-  .project-card p {
-    font-size: 13px;
-  }
-
+  .project-card p,
   .project-card a {
     font-size: 13px;
-    display: inline-block;
-    margin-top: 10px;
-  }
-  .certs-section {
-    padding: 50px 20px;
-    text-align: center;
   }
 
-  .certs-section h2 {
+ .certifications-section {
+    padding: 60px 15px;
+  }
+
+  .certifications-section h2 {
     font-size: 24px;
     margin-bottom: 30px;
   }
 
   .certs-wrapper {
-    display: flex;
-    flex-direction: column;
+    padding: 15px 35px;
+  }
+
+  .certs-container {
     gap: 20px;
   }
 
   .cert-card {
-    width: 100%;
-    padding: 15px;
-    font-size: 14px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 260px;
+    padding: 14px;
   }
 
   .cert-card img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
+    height: 160px;
   }
 
   .cert-card h3 {
-    font-size: 16px;
-    margin-bottom: 5px;
+    font-size: 0.95rem;
   }
 
   .cert-card p {
-    font-size: 13px;
+    font-size: 0.85rem;
   }
 
-  .cert-card a {
-    font-size: 13px;
-    margin-top: 10px;
-    display: inline-block;
+  .carousel-btn {
+    font-size: 1.8rem;
+    padding: 6px;
   }
+
+  /* 📄 Resume Section */
   .resume-wrapper {
-      padding: 15px;
-      width: 100%;
-      max-width: 450px;
+    padding: 15px;
+    width: 100%;
+    max-width: 450px;
   }
-   .resume-section {
+
+  .resume-section {
     padding: 40px 15px;
   }
 
@@ -1288,9 +1302,10 @@
     max-width: 200px;
   }
 
-  /* 💌 Contact Section */
+  /* 📞 Contact Section */
   .contact-section {
     padding: 60px 20px;
+    text-align: center;
   }
 
   .contact-section h2 {
@@ -1302,7 +1317,7 @@
     gap: 30px;
   }
 
-  .contact-form, 
+  .contact-form,
   .contact-info {
     width: 100%;
     max-width: 100%;
