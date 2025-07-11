@@ -165,5 +165,4 @@ const roles = [
   window.addEventListener('load', () => {
     setInitialPosition();
   });
-
 });

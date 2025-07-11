@@ -37,37 +37,54 @@
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
       <a href="#certifications">Certifications</a>
+      <a href="#Education">Education</a>
       <a href="#resume">Resume</a>
       <a href="#contact">Contact</a>
     </nav>
+    <div class="Download"><strong><a href="assets/resume/Dhana_raju_CV.pdf" target="_blank" style="text-decoration: none; color:black">Download CV</a></strong></div>
     <div class="hamburger" onclick="toggleMenu()">☰</div>
   </header>
 
-  <!-- ======= HERO SECTION ======= -->
- <section id="home" class="hero-section" data-aos="fade-up">
-  <div class="hero-content">
-    <h1>Hi, I'm Dhana Raju 👋</h1>
-    <p id="role-text" class="animated-role">Full Stack Developer<span class="cursor">|</span></p>
-    <div class="social-icons">
-      <a href="https://linkedin.com/in/dhana-raju-illa-8906842a8" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="https://github.com/ILLA-DHANA-RAJU" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://mail.google.com/mail/?view=cm&to=illadhanaraju@gmail.com&su=Hello%20Raju&body=Hi%20Raju,%20I%20would%20like%20to%20connect%20with%20you." target="_blank"><i class="fas fa-envelope"></i></a>
-      <a href="https://x.com/DhanaRaju__illa" target="_blank"><i class="fab fa-twitter"></i></a>
+<!-- ======= HERO SECTION ======= -->
+<section id="home" class="hero-section">
+  <!-- 🌌 Background Video -->
+  <video autoplay muted loop playsinline class="bg-video">
+    <source src="assets/videos/Animate2.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="hero-wrapper">
+    <!-- Left: Content -->
+    <div class="hero-content" data-aos="fade-right">
+      <h1>Hi, I'm Illa Dhana Raju 👋</h1>
+      <p id="role-text" class="animated-role">Full Stack Developer<span class="cursor">|</span></p>
+      <div class="social-icons">
+        <a href="https://linkedin.com/in/dhana-raju-illa-8906842a8" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/ILLA-DHANA-RAJU" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://mail.google.com/mail/?view=cm&to=illadhanaraju@gmail.com&su=Hello%20Raju" target="_blank"><i class="fas fa-envelope"></i></a>
+        <a href="https://x.com/DhanaRaju__illa" target="_blank"><i class="fab fa-twitter"></i></a>
+      </div>
+      <a href="#about" class="scroll-down">↓ Scroll Down</a>
     </div>
-    <a href="#about" class="scroll-down">↓ Scroll Down</a>
+    <!-- Right: Profile Image -->
+    <div class="hero-image-wrapper" data-aos="fade-left">
+      <div class="circle-lines"></div> <!-- 💫 Decorative lines behind image -->
+      <img src="assets/images/DSC_0220.jpg" alt="Dhana Raju" class="profile-img" />
+    </div>
   </div>
 </section>
-
   <!-- Empty sections for next steps -->
-  <section id="about" class="about-section" data-aos="fade-up">
-    <div class="about-container">
+  <section id="about" class="about-section">
+    <div class="about-container" data-aos="fade-right">
       <div class="about-image">
         <img src="assets/images/DSC_0220.jpg" alt="Raju Profile">
       </div>
-      <div class="about-content">
+      <div class="about-content" data-aos="fade-right">
         <h2>About Me</h2>
         <p>
-          I'm Dhana Raju, a passionate Full Stack Developer and Machine Learning enthusiast. I build interactive web apps and smart solutions using HTML, CSS, JS, Python, and more. I love turning complex problems into simple, beautiful interfaces.
+          I'm Dhana Raju, a passionate Full Stack Developer and Machine Learning enthusiast. 
+          I build interactive web apps and smart solutions using HTML, CSS, JS, Python, and more. 
+          I love turning complex problems into simple, beautiful interfaces.
         </p>
         <p>
           I’m always exploring new technologies and constantly improving myself through internships, real-time projects, and open-source contributions.
@@ -76,9 +93,9 @@
     </div>
   </section>
   
-  <section id="skills" class="skills-section" data-aos="fade-up">
-    <h2>My Skills</h2>
-  <div class="skills-container">
+  <section id="skills" class="skills-section">
+    <h2>MY Skills</h2>
+  <div class="skills-container" data-aos="fade-up">
   <div class="skill-card">
     HTML5<br><i class="fab fa-html5 fa-2x"></i>
   </div>
@@ -119,7 +136,7 @@
 
   </section>
 
-<section id="projects" class="projects-section" data-aos="fade-up">
+<section id="projects" class="projects-section">
   <h2>Internships & Projects</h2>
   <div class="projects-container">
     <!-- Project 1 -->
@@ -184,10 +201,9 @@
   </div>
 </section>
 
-<section id="certifications" class="certifications-section" data-aos="fade-up">
+<section id="certifications" class="certifications-section">
   <h2>Certifications</h2>
-  <button class="carousel-btn left" id="prevBtn">&#10094;</button>
-    <div class="certs-wrapper">
+    <div class="certs-wrapper" data-aos="fade-right">
       <div class="certs-container" id="certsContainer">
         <div class="cert-card">
           <img src="assets/certificates/NPTEL Certificate.png" alt="NPTEL Certificate" onclick="openModal(this.src)">
@@ -222,16 +238,49 @@
         <!-- More .cert-card blocks can be added here -->
       </div>
     </div>
-    <button class="carousel-btn right" id="nextBtn">&#10095;</button>
     <div id="certModal" class="modal">
       <span class="close" onclick="closeModal()">&times;</span>
       <img class="modal-content" id="modalImg">
     </div>
   </section>
 
-  <section id="resume" class="resume-section" data-aos="fade-up">
+<section id="Education" class="education-section">
+  <h2>About My Studies</h2>
+  <div class="container-box education-content"> 
+    <!-- B.Tech Card -->
+    <div class="timeline-item left"  data-aos="fade-up">
+      <div class="card-container">
+        <h3>B.Tech - Computer Science and Engineering</h3>
+        <div class="content-block">
+          <p stlye="text-align: center"><strong>College:</strong> VSM College of Engineering, Ramachandrapuram</p>
+          <p><strong>University:</strong> JNTUK</p>
+          <p><strong>Year:</strong> 2021 - 2025</p>
+          <p><strong>CGPA:</strong> 62%</p>
+          <p><strong>Final Year Projects:</strong> Heart Rate Monitoring System, Crypto Price Prediction</p>
+          <p><strong>College Profile link: </strong><a href="https://www.vsm.edu.in/" target="_blank" alt="V.S.M College of Engineering Web site here">V.S.M College of Engineering </a>
+            <strong> 👈🏻 Click Here</strong></p>
+        </div>
+      </div>
+    </div>
+    <!-- Intermediate Card -->
+     <div class="timeline-item right" data-aos="fade-up">
+      <div class="card-container">
+        <h3>Intermediate - MPC</h3>
+        <div class="content-block">
+          <p><strong>College:</strong> Pratibha Junior College</p>
+          <p><strong>Year:</strong> 2019 - 2021</p>
+          <p><strong>Percentage:</strong> 68%</p>
+          <p><strong>Board:</strong> BIEAP (Andhra Pradesh)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <section id="resume" class="resume-section">
     <h2>My Resume</h2>
-    <div class="resume-wrapper">
+    <div class="resume-wrapper" data-aos="fade-up">
       <iframe src="assets/resume/resume.pdf" frameborder="0"></iframe>
       <div class="resume-actions">
         <a href="assets/resume/resume.pdf" target="_blank" class="btn view-btn">View Fullscreen</a>
@@ -240,10 +289,10 @@
     </div>
   </section>
   
-  <section id="contact" class="contact-section" data-aos="fade-up">
+  <section id="contact" class="contact-section">
   <h2>Contact Me</h2>
   <div class="contact-wrapper">
-    <div class="contact-info">
+    <div class="contact-info" data-aos="fade-right">
       <p>If you’d like to work with me or just say hello, reach out:</p>
       <h3>Email:<a href="https://mail.google.com/mail/?view=cm&to=illadhanaraju@gmail.com&su=Hello%20Raju&body=Enter%20your%20opinion." target="_blank">illadhanaraju@gmail.com</a></h3>
       <div class="social-icons">
@@ -252,7 +301,7 @@
         <a href="https://mail.google.com/mail/?view=cm&to=illadhanaraju@gmail.com&su=Hello%20Raju&body=Enter%20your%20opinion." target="_blank"><i class="fas fa-envelope"></i></a>
       </div>
     </div>
-    <div class="contact-form">
+    <div class="contact-form" data-aos="fade-right">
       <form id="contactForm" action="https://formspree.io/f/mldbqngk" method="POST">
         <input type="text" name="name" placeholder="Your Name" required>
         <input type="email" name="email" placeholder="Your Email" required>
@@ -264,7 +313,7 @@
 </section>
 <hr class="section-divider">
 <footer class="footer">
-  <div class="footer-content">
+  <div class="footer-content" data-aos="fade-right">
     <p><i>&copy; 2025 Dhana Raju. All Rights Reserved.</i></p>
     <div class="footer-links">
       <a href="#home">Home</a>
