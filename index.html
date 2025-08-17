@@ -20,7 +20,7 @@
   <meta name="twitter:title" content="Dhana Raju | Portfolio">
   <meta name="twitter:description" content="Explore Dhana Raju's projects and web skills.">
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/x-icon" href="assets/images/image.png">
+  <link rel="icon" type="image/x-icon" href="assets/images/logo.png">
   <script defer src="scripts.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
@@ -34,294 +34,343 @@
     <nav class="nav-links" id="navMenu">
       <a href="#home">Home</a>
       <a href="#about">About Me</a>
+      <a href="#Education">Education</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
       <a href="#certifications">Certifications</a>
-      <a href="#Education">Education</a>
       <a href="#resume">Resume</a>
       <a href="#contact">Contact</a>
     </nav>
-    <div class="Download"><strong><a href="assets/resume/Dhana_raju_CV.pdf" target="_blank" style="text-decoration: none; color:black">Download CV</a></strong></div>
+    <div class="Download"><strong><a href="assets/resume/Dhana_raju_CV.pdf" target="_blank" style="text-decoration: none; color:black"><i class="fas fa-download"></i> Download CV</a></strong></div>
     <div class="hamburger" onclick="toggleMenu()">☰</div>
   </header>
 
 <!-- ======= HERO SECTION ======= -->
-<section id="home" class="hero-section">
-  <!-- 🌌 Background Video -->
-  <video autoplay muted loop playsinline class="bg-video">
-    <source src="assets/videos/Animate2.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
+<main>
+ <section id="home" class="hero-section active section" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
 
-  <div class="hero-wrapper">
-    <!-- Left: Content -->
-    <div class="hero-content" data-aos="fade-right">
-      <h1>Hi, I'm Illa Dhana Raju 👋</h1>
-      <p id="role-text" class="animated-role">Full Stack Developer<span class="cursor">|</span></p>
-      <div class="social-icons">
-        <a href="https://linkedin.com/in/dhana-raju-illa-8906842a8" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/ILLA-DHANA-RAJU" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://mail.google.com/mail/?view=cm&to=illadhanaraju@gmail.com&su=Hello%20Raju" target="_blank"><i class="fas fa-envelope"></i></a>
-        <a href="https://x.com/DhanaRaju__illa" target="_blank"><i class="fab fa-twitter"></i></a>
-      </div>
-      <a href="#about" class="scroll-down">↓ Scroll Down</a>
-    </div>
-    <!-- Right: Profile Image -->
-    <div class="hero-image-wrapper" data-aos="fade-left">
-      <div class="circle-lines"></div> <!-- 💫 Decorative lines behind image -->
-      <img src="assets/images/DSC_0220.jpg" alt="Dhana Raju" class="profile-img" />
-    </div>
-  </div>
-</section>
-  <!-- Empty sections for next steps -->
-  <section id="about" class="about-section">
-    <div class="about-container" data-aos="fade-right">
-      <div class="about-image">
-        <img src="assets/images/DSC_0220.jpg" alt="Raju Profile">
-      </div>
-      <div class="about-content" data-aos="fade-right">
-        <h2>About Me</h2>
-        <p>
-          I'm Dhana Raju, a passionate Full Stack Developer and Machine Learning enthusiast. 
-          I build interactive web apps and smart solutions using HTML, CSS, JS, Python, and more. 
-          I love turning complex problems into simple, beautiful interfaces.
-        </p>
-        <p>
-          I’m always exploring new technologies and constantly improving myself through internships, real-time projects, and open-source contributions.
-        </p>
-      </div>
-    </div>
-  </section>
-  
-  <section id="skills" class="skills-section">
-    <h2>MY Skills</h2>
-  <div class="skills-container" data-aos="fade-up">
-  <div class="skill-card">
-    HTML5<br><i class="fab fa-html5 fa-2x"></i>
-  </div>
-  <div class="skill-card">
-    CSS3<br><i class="fab fa-css3-alt fa-2x"></i>
-  </div>
-  <div class="skill-card">
-    JavaScript<br><i class="fab fa-js fa-2x"></i>
-  </div>
-  <div class="skill-card">
-    React.js<br><i class="fab fa-react fa-2x"></i>
-  </div>
-  <div class="skill-card">
-    Python<br><i class="fab fa-python fa-2x"></i>
-  </div>
-  <div class="skill-card">
-    C Language<br><i class="fas fa-code fa-2x"></i>
-  </div>
-  <div class="skill-card">
-    Django<br><i class="fas fa-leaf fa-2x"></i>
-  </div>
-  <div class="skill-card">
-    Flask<br><i class="fas fa-flask fa-2x"></i>
-  </div>
-  <div class="skill-card">
-    Machine Learning<br><i class="fas fa-brain fa-2x"></i>
-  </div>
-  <div class="skill-card">
-    SQL<br><i class="fas fa-database fa-2x"></i>
-  </div>
-  <div class="skill-card">
-    Git & GitHub<br><i class="fab fa-github fa-2x"></i>
-  </div>
-  <div class="skill-card">
-    Responsive Design<br><i class="fas fa-mobile-alt fa-2x"></i>
-  </div>
-</div>
+  <!-- Background Slider -->
+      <div class="bg-slide active" style="background-image: url('assets/bgimages/Background.jpg');"></div>
+      <div class="bg-slide" style="background-image: url('assets/bgimages/Background2.avif');"></div>
+      <div class="bg-slide" style="background-image: url('assets/bgimages/Background3.avif');"></div>
+      <div class="bg-slide" style="background-image: url('assets/bgimages/skills.jpg');"></div>
 
-  </section>
+    <div class="hero-wrapper">
+      <!-- Left: Content -->
+      <div class="hero-content" data-aos="fade-right">
+        <h1>Hi, I'm Illa Dhana Raju 👋</h1>
+        <p id="role-text" class="animated-role"><span class="cursor">|</span></p>
+        <div class="social-icons">
+          <a href="https://linkedin.com/in/dhana-raju-illa-8906842a8" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/ILLA-DHANA-RAJU" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://mail.google.com/mail/?view=cm&to=illadhanaraju@gmail.com&su=Hello%20Raju" target="_blank"><i class="fas fa-envelope"></i></a>
+          <a href="assets/resume/Dhana_raju_CV.pdf" download><i class="fas fa-download"></i></a>
+        </div>
+      </div>
 
-<section id="projects" class="projects-section">
-  <h2>Internships & Projects</h2>
-  <div class="projects-container">
-    <!-- Project 1 -->
-    <div class="project-images-wrapper">
-      <div class="project-card" data-aos="fade-up"> 
-        <div class="project-images carousel">
-          <div class="project-images-inner">
-            <img src="assets/images/crypto1.png" alt="Crypto Project 1">
-            <img src="assets/images/crypto2.png" alt="Crypto Project 2">
-            <img src="assets/images/crypto3.png" alt="Crypto Project 3">
-            <img src="assets/images/crypto4.png" alt="Crypto Project 4">
-            <img src="assets/images/crypto5.png" alt="Crypto Project 5">
+      <!-- Right: Flippable Profile Image -->
+      <div class="hero-image-wrapper" data-aos="fade-left">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="assets/images/DSC_0220.jpg" alt="Dhana Raju" class="profile-img" />
+            </div>
+            <div class="flip-card-back">
+              <h2>About Me</h2>
+              <p>Creative & Passionate Developer</p>
+              <p>Loves building web apps 🚀</p>
+            </div>
           </div>
         </div>
-        <div class="dots"></div>
-        <h3>Crypto Price Prediction</h3>
-        <p>Used ML & LSTM models to predict BTC, ETH, and LTC prices with 7-day forecasting. Visualized results and generated investment insights.</p>
-        <p>Project Link <a href="">Git hub link</a></p>
-        <span class="tag">ML</span><span class="tag">LSTM</span><span class="tag">Matplotlib</span>
       </div>
     </div>
-    <!-- Project 2 -->
-    <div class="project-images-wrapper">
-      <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-        <div class="project-images carousel">
-          <div class="project-images-inner">
-            <img src="assets/images/pulse1.jpg" alt="Heart Monitor 1">
-            <img src="assets/images/pulse2.png" alt="Heart Monitor 2">
-            <img src="assets/images/pulse3.png" alt="Heart Monitor 3">
-            <img src="assets/images/pulse4.png" alt="Heart Monitor 4">
-            <img src="assets/images/pulse5.png" alt="Heart Monitor 5">
-          </div>
-        </div>
-        <div class="dots"></div>
-        <h3>Heart Rate Monitoring System</h3>
-        <p>Developed a real-time health monitoring system using Arduino, Pulse Sensor, and ThingSpeak, integrated with a Flask web app to display BPM and health status.</p>
-        <div class="project-links">
-          <p>Project Link <a href="https://github.com/ILLA-DHANA-RAJU/IOT-Project-on-health-assessment.git" target="blank">Git hub link</a></p>
-        </div>
-        <span class="tag">IoT</span><span class="tag">Flask</span><span class="tag">ThingSpeak</span>
-      </div>
-    </div>
-    <!-- Project 3 -->
-    <div class="project-images-wrapper">
-      <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-        <div class="project-images carousel">
-          <div class="project-images-inner">
-            <img src="assets/images/covide1.png" alt="Covid App 1">
-            <img src="assets/images/covide2.png" alt="Covid App 2">
-            <img src="assets/images/covide3.png" alt="Covid App 3">
-            <img src="assets/images/covide4.png" alt="Covid App 4">
-            <img src="assets/images/covide5.png" alt="Covid App 5">
-          </div>
-        </div>
-        <div class="dots"></div>
-        <h3>Covid Testing Management</h3>
-        <p>Full-stack web app built during internship at VSM College. Managed test records, reports, and admin dashboard with secure login.</p>
-        <p>Project Link <a href="">Git hub link</a></p>
-        <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Python</span>
-      </div>
-    </div>
-  </div>
-</section>
 
-<section id="certifications" class="certifications-section">
-  <h2>Certifications</h2>
-    <div class="certs-wrapper" data-aos="fade-right">
-      <div class="certs-container" id="certsContainer">
-        <div class="cert-card">
-          <img src="assets/certificates/NPTEL Certificate.png" alt="NPTEL Certificate" onclick="openModal(this.src)">
-          <h3>NPTEL - The Joy of Computing using Python</h3>
-          <p>Issued by NPTEL | Score: 56%</p>
+    <!-- Services Section inside Home -->
+    <div class="hero-services" data-aos="fade-up">
+      <h2>My Services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <i class="fas fa-code"></i>
+          <h3>Web Development</h3>
+          <p>Building responsive, fast, and secure web apps.</p>
         </div>
-        <div class="cert-card">
-          <img src="assets/certificates/Iot.png" alt="IoT Internship Certificate" onclick="openModal(this.src)">
-          <h3>IoT Internship - Ocean Apps Technologies</h3>
-          <p>Designed a heart rate monitoring system with real-time visualization.</p>
+        <div class="service-card">
+          <i class="fas fa-mobile-alt"></i>
+          <h3>Mobile Development</h3>
+          <p>Cross-platform apps with smooth UI & UX.</p>
         </div>
-        <div class="cert-card">
-          <img src="assets/certificates/Web developmen in college.jpg" alt="Full Stack Internship Certificate" onclick="openModal(this.src)">
-          <h3>Full Stack Development Internship</h3>
-          <p>Developed a Covid Testing System at VSM College.</p>
+        <div class="service-card">
+          <i class="fas fa-database"></i>
+          <h3>Backend Solutions</h3>
+          <p>Scalable APIs & database design.</p>
         </div>
-        <div class="cert-card">
-          <img src="assets/certificates/AI.jpg" alt="IoT Internship Certificate" onclick="openModal(this.src)">
-          <h3>Fundmental of AI - Ocean Apps Technologies</h3>
-          <p>3-months training classes on Fundamentals on AI of ML and DL basics .</p>
-        </div>
-        <div class="cert-card">
-          <img src="assets/certificates/Freecodecamp.png" alt="IoT Internship Certificate" onclick="openModal(this.src)">
-          <h3>Web development - freecodecamp</h3>
-          <p>Completed tasks and getting certification from freecodecamp on responsive web development</p>
-        </div>
-        <div class="cert-card">
-          <img src="assets/certificates/IBM.png" alt="IoT Internship Certificate" onclick="openModal(this.src)">
-          <h3>Machine Learning with pyton - IBM</h3>
-          <p>Learning of Machine learning concepts to complete tasks in IBM.</p>
-        </div>
-        <!-- More .cert-card blocks can be added here -->
       </div>
     </div>
-    <div id="certModal" class="modal">
-      <span class="close" onclick="closeModal()">&times;</span>
-      <img class="modal-content" id="modalImg">
+
+  </section>
+
+    <!-- Empty sections for next steps -->
+    <section id="about" class="about-section section">
+      <div class="about-container" data-aos="fade-right">
+        <div class="about-image">
+          <img src="assets/images/DSC_0220.jpg" alt="Raju Profile">
+        </div>
+        <div class="about-content" data-aos="fade-right">
+          <h2>About Me</h2>
+          <p>
+            I'm Dhana Raju, a passionate Full Stack Developer and Machine Learning enthusiast. 
+            I build interactive web apps and smart solutions using HTML, CSS, JS, Python, and more. 
+            I love turning complex problems into simple, beautiful interfaces.
+          </p>
+          <p>
+            I’m always exploring new technologies and constantly improving myself through internships, real-time projects, and open-source contributions.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Education section -->
+    <section id="Education" class="education-section section">
+      <h2>About My Studies</h2>
+      <div class="container-box education-content"> 
+        <!-- B.Tech Card -->
+        <div class="timeline-item left"  data-aos="fade-up">
+          <div class="card-container">
+            <h3>B.Tech - Computer Science and Engineering</h3>
+            <hr class="section-block">
+            <div class="content-block">
+              <p stlye="text-align: center"><strong>College:</strong> VSM College of Engineering, Ramachandrapuram</p>
+              <p><strong>University:</strong> JNTUK</p>
+              <p><strong>Year:</strong> 2021 - 2025</p>
+              <p><strong>CGPA:</strong> 62%</p>
+              <p><strong>Final Year Projects:</strong> Heart Rate Monitoring System, Crypto Price Prediction</p>
+              <p><strong>College Profile link: </strong><a href="https://www.vsm.edu.in/" target="_blank" alt="V.S.M College of Engineering Web site here">V.S.M College of Engineering </a>
+                <strong> 👈🏻 Click Here</strong></p>
+            </div>
+          </div>
+        </div>
+        <!-- Intermediate Card -->
+        <div class="timeline-item right" data-aos="fade-up">
+          <div class="card-container">
+            <h3>Intermediate - MPC</h3>
+            <hr class="section-block">
+            <div class="content-block">
+              <p><strong>College:</strong> Pratibha Junior College</p>
+              <p><strong>Year:</strong> 2019 - 2021</p>
+              <p><strong>Percentage:</strong> 68%</p>
+              <p><strong>Board:</strong> BIEAP (Andhra Pradesh)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Skills section -->
+    <section id="skills" class="skills-section section">
+      <h2>My Skills</h2>
+      <div class="skills-container card-group">
+        <div class="skill-group">
+          <h3 class="group-title">Web & Frameworks</h3>
+          <div class="inner-tech">
+            <p>HTML</p>
+            <p>CSS</p>
+            <p>JavaScript</p>
+            <p>React</p>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3 class="group-title">Backend Technologies</h3>
+          <div class="inner-tech">
+            <p>Python</p>
+            <p>Django</p>
+            <p>Flask</p>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="group-title">Databases</h3>
+          <div class="inner-tech">
+            <p>MySQL</p>
+            <p>SQLite</p>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="group-title">Tools</h3>
+          <div class="inner-tech">
+            <p>Git</p>
+            <p>GitHub</p>
+            <p>VS Code</p>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="group-title">Soft Skills</h3>
+          <div class="inner-tech">
+            <p>Problem Solving</p>
+            <p>Communication</p>
+            <p>Teamwork</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects section -->
+  <section id="projects" class="projects-section section">
+    <h2>Internships & Projects</h2>
+    <div class="projects-container">
+      <!-- Project 1 -->
+      <div class="project-images-wrapper">
+        <div class="project-card"> 
+          <div class="project-images carousel">
+            <div class="project-images-inner">
+              <img src="assets/images/crypto1.png" alt="Crypto Project 1">
+              <img src="assets/images/crypto2.png" alt="Crypto Project 2">
+              <img src="assets/images/crypto3.png" alt="Crypto Project 3">
+              <img src="assets/images/crypto4.png" alt="Crypto Project 4">
+              <img src="assets/images/crypto5.png" alt="Crypto Project 5">
+            </div>
+          </div>
+          <div class="dots"></div>
+          <h3>Crypto Price Prediction</h3>
+          <p>Used ML & LSTM models to predict BTC, ETH, and LTC prices with 7-day forecasting. Visualized results and generated investment insights.</p>
+          <p>Project Link <a href="">Git hub link</a></p>
+          <span class="tag">ML</span><span class="tag">LSTM</span><span class="tag">Matplotlib</span>
+        </div>
+      </div>
+      <!-- Project 2 -->
+      <div class="project-images-wrapper">
+        <div class="project-card">
+          <div class="project-images carousel">
+            <div class="project-images-inner">
+              <img src="assets/images/pulse1.jpg" alt="Heart Monitor 1">
+              <img src="assets/images/pulse2.png" alt="Heart Monitor 2">
+              <img src="assets/images/pulse3.png" alt="Heart Monitor 3">
+              <img src="assets/images/pulse4.png" alt="Heart Monitor 4">
+              <img src="assets/images/pulse5.png" alt="Heart Monitor 5">
+            </div>
+          </div>
+          <div class="dots"></div>
+          <h3>Heart Rate Monitoring System</h3>
+          <p>Developed a real-time health monitoring system using Arduino, Pulse Sensor, and ThingSpeak, integrated with a Flask web app to display BPM and health status.</p>
+          <div class="project-links">
+            <p>Project Link <a href="https://github.com/ILLA-DHANA-RAJU/IOT-Project-on-health-assessment.git" target="blank">Git hub link</a></p>
+          </div>
+          <span class="tag">IoT</span><span class="tag">Flask</span><span class="tag">ThingSpeak</span>
+        </div>
+      </div>
+      <!-- Project 3 -->
+      <div class="project-images-wrapper">
+        <div class="project-card">
+          <div class="project-images carousel">
+            <div class="project-images-inner">
+              <img src="assets/images/covide1.png" alt="Covid App 1">
+              <img src="assets/images/covide2.png" alt="Covid App 2">
+              <img src="assets/images/covide3.png" alt="Covid App 3">
+              <img src="assets/images/covide4.png" alt="Covid App 4">
+              <img src="assets/images/covide5.png" alt="Covid App 5">
+            </div>
+          </div>
+          <div class="dots"></div>
+          <h3>Covid Testing Management</h3>
+          <p>Full-stack web app built during internship at VSM College. Managed test records, reports, and admin dashboard with secure login.</p>
+          <p>Project Link <a href="">Git hub link</a></p>
+          <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Python</span>
+        </div>
+      </div>
     </div>
   </section>
 
-<section id="Education" class="education-section">
-  <h2>About My Studies</h2>
-  <div class="container-box education-content"> 
-    <!-- B.Tech Card -->
-    <div class="timeline-item left"  data-aos="fade-up">
-      <div class="card-container">
-        <h3>B.Tech - Computer Science and Engineering</h3>
-        <div class="content-block">
-          <p stlye="text-align: center"><strong>College:</strong> VSM College of Engineering, Ramachandrapuram</p>
-          <p><strong>University:</strong> JNTUK</p>
-          <p><strong>Year:</strong> 2021 - 2025</p>
-          <p><strong>CGPA:</strong> 62%</p>
-          <p><strong>Final Year Projects:</strong> Heart Rate Monitoring System, Crypto Price Prediction</p>
-          <p><strong>College Profile link: </strong><a href="https://www.vsm.edu.in/" target="_blank" alt="V.S.M College of Engineering Web site here">V.S.M College of Engineering </a>
-            <strong> 👈🏻 Click Here</strong></p>
+  <!-- Certificates section -->
+  <section id="certifications" class="certifications-section section">
+    <h2>Certifications</h2>
+      <div class="certs-wrapper" data-aos="fade-right">
+        <div class="certs-container" id="certsContainer">
+          <div class="cert-card">
+            <img src="assets/certificates/NPTEL Certificate.png" alt="NPTEL Certificate" onclick="openModal(this.src)">
+            <h3>NPTEL - The Joy of Computing using Python</h3>
+            <p>Issued by NPTEL | Score: 56%</p>
+          </div>
+          <div class="cert-card">
+            <img src="assets/certificates/Iot.png" alt="IoT Internship Certificate" onclick="openModal(this.src)">
+            <h3>IoT Internship - Ocean Apps Technologies</h3>
+            <p>Designed a heart rate monitoring system with real-time visualization.</p>
+          </div>
+          <div class="cert-card">
+            <img src="assets/certificates/Web developmen in college.jpg" alt="Full Stack Internship Certificate" onclick="openModal(this.src)">
+            <h3>Full Stack Development Internship</h3>
+            <p>Developed a Covid Testing System at VSM College.</p>
+          </div>
+          <div class="cert-card">
+            <img src="assets/certificates/AI.jpg" alt="IoT Internship Certificate" onclick="openModal(this.src)">
+            <h3>Fundmental of AI - Ocean Apps Technologies</h3>
+            <p>3-months training classes on Fundamentals on AI of ML and DL basics .</p>
+          </div>
+          <div class="cert-card">
+            <img src="assets/certificates/Freecodecamp.png" alt="IoT Internship Certificate" onclick="openModal(this.src)">
+            <h3>Web development - freecodecamp</h3>
+            <p>Completed tasks and getting certification from freecodecamp on responsive web development</p>
+          </div>
+          <div class="cert-card">
+            <img src="assets/certificates/IBM.png" alt="IoT Internship Certificate" onclick="openModal(this.src)">
+            <h3>Machine Learning with pyton - IBM</h3>
+            <p>Learning of Machine learning concepts to complete tasks in IBM.</p>
+          </div>
+          <!-- More Certificates add here -->
         </div>
       </div>
-    </div>
-    <!-- Intermediate Card -->
-     <div class="timeline-item right" data-aos="fade-up">
-      <div class="card-container">
-        <h3>Intermediate - MPC</h3>
-        <div class="content-block">
-          <p><strong>College:</strong> Pratibha Junior College</p>
-          <p><strong>Year:</strong> 2019 - 2021</p>
-          <p><strong>Percentage:</strong> 68%</p>
-          <p><strong>Board:</strong> BIEAP (Andhra Pradesh)</p>
+      <div id="certModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImg">
+      </div>
+    </section>
+
+    <!-- Resume section -->
+    <section id="resume" class="resume-section section">
+      <h2>My Resume</h2>
+      <div class="resume-wrapper" data-aos="fade-up">
+        <iframe src="assets/resume/Dhana_Raju_Developer.pdf" frameborder="0"></iframe>
+        <div class="resume-actions">
+          <a href="assets/resume/Dhana_Raju_Developer.pdf" target="_blank" class="btn view-btn">View Fullscreen</a>
+          <a href="assets/resume/Dhana_Raju_Developer.pdf" download class="btn download-btn">Download PDF</a>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-
-  <section id="resume" class="resume-section">
-    <h2>My Resume</h2>
-    <div class="resume-wrapper" data-aos="fade-up">
-      <iframe src="assets/resume/resume.pdf" frameborder="0"></iframe>
-      <div class="resume-actions">
-        <a href="assets/resume/resume.pdf" target="_blank" class="btn view-btn">View Fullscreen</a>
-        <a href="assets/resume/resume.pdf" download class="btn download-btn">Download PDF</a>
+    </section>
+    
+    <!-- Contact form section -->
+    <section id="contact" class="contact-section section">
+    <h2>Contact Me</h2>
+    <div class="contact-wrapper">
+      <div class="contact-info" data-aos="fade-right">
+        <p>If you’d like to work with me or just say hello, reach out:</p>
+        <h3>Email:<a href="https://mail.google.com/mail/?view=cm&to=illadhanaraju@gmail.com&su=Hello%20Raju&body=Enter%20your%20opinion." target="_blank">illadhanaraju@gmail.com</a></h3>
+        <div class="social-icons">
+          <a href="https://linkedin.com/in/dhana-raju-illa-8906842a8" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/ILLA-DHANA-RAJU" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://mail.google.com/mail/?view=cm&to=illadhanaraju@gmail.com&su=Hello%20Raju&body=Enter%20your%20opinion." target="_blank"><i class="fas fa-envelope"></i></a>
+        </div>
       </div>
+      <div class="contact-form" data-aos="fade-right">
+        <form id="contactForm" action="https://formspree.io/f/mldbqngk" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div> 
     </div>
   </section>
-  
-  <section id="contact" class="contact-section">
-  <h2>Contact Me</h2>
-  <div class="contact-wrapper">
-    <div class="contact-info" data-aos="fade-right">
-      <p>If you’d like to work with me or just say hello, reach out:</p>
-      <h3>Email:<a href="https://mail.google.com/mail/?view=cm&to=illadhanaraju@gmail.com&su=Hello%20Raju&body=Enter%20your%20opinion." target="_blank">illadhanaraju@gmail.com</a></h3>
-      <div class="social-icons">
-        <a href="https://linkedin.com/in/dhana-raju-illa-8906842a8" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/ILLA-DHANA-RAJU" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://mail.google.com/mail/?view=cm&to=illadhanaraju@gmail.com&su=Hello%20Raju&body=Enter%20your%20opinion." target="_blank"><i class="fas fa-envelope"></i></a>
-      </div>
-    </div>
-    <div class="contact-form" data-aos="fade-right">
-      <form id="contactForm" action="https://formspree.io/f/mldbqngk" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </div> 
-  </div>
-</section>
+</main>
 <hr class="section-divider">
 <footer class="footer">
   <div class="footer-content" data-aos="fade-right">
     <p><i>&copy; 2025 Dhana Raju. All Rights Reserved.</i></p>
-    <div class="footer-links">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </div>
-    <button class="back-to-top" onclick="scrollToTop()">↑ Back to Top</button>
+  </div>
+  <div class="social-icon items">
+    <a href="https://linkedin.com/in/dhana-raju-illa-8906842a8" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="https://github.com/ILLA-DHANA-RAJU" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="" target="_blank"><i class="fab fa-twitter"></i></a>
   </div>
 </footer>
 
@@ -331,9 +380,6 @@
     duration: 1000,
     once: true
   });
-  function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
   function toggleMenu() {
   document.getElementById("navMenu").classList.toggle("show");
   document.querySelector(".hamburger").classList.toggle("open");
@@ -358,6 +404,34 @@
       modal.style.display = "none";
     }
   };
+  const slides = document.querySelectorAll('.bg-slide');
+  let current = 0;
+
+  function changeSlide() {
+    slides[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+  }
+
+  setInterval(changeSlide, 5000);
+
+  function toggleMenu() {
+    document.getElementById("navMenu").classList.toggle("active");
+  }
+
+  // Close menu when clicking outside
+  document.addEventListener("click", function(event) {
+    const navMenu = document.getElementById("navMenu");
+    const hamburger = document.querySelector(".hamburger");
+
+    if (!navMenu.contains(event.target) && !hamburger.contains(event.target)) {
+      navMenu.classList.remove("active");
+    }
+  });
+</script>
+
+
+
 </script>
 </body>
 </html>

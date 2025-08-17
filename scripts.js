@@ -37,132 +37,93 @@ const roles = [
 
     setTimeout(typeEffect, speed);
   }
+  typeEffect()
 
-  // Start the animation
- document.addEventListener("DOMContentLoaded", () => {
-  // ➤ Type effect (if any)
-  if (typeof typeEffect === 'function') typeEffect();
+// ========== SECTION SWITCHING ==========
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    const targetId = this.getAttribute('href').substring(1);
 
-  // ➤ Project Image Sliders
-  document.querySelectorAll('.project-images-wrapper').forEach((wrapper) => {
-    const inner = wrapper.querySelector('.project-images-inner');
-    const images = inner.querySelectorAll('img');
-    const dotsContainer = wrapper.querySelector('.dots');
-    let projIndex = 0;
-    const total = images.length;
-    const wrapperWidth = wrapper.querySelector('.project-images').offsetWidth;
+    // Hide all sections
+    document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
 
-    inner.style.width = `${wrapperWidth * total}px`;
-    images.forEach(img => {
-      img.style.width = `${wrapperWidth}px`;
-      img.style.flexShrink = '0';
-    });
-
-    for (let i = 0; i < total; i++) {
-      const dot = document.createElement('span');
-      dot.classList.add('dot');
-      dot.addEventListener('click', () => goToImage(i));
-      dotsContainer.appendChild(dot);
-    }
-
-    const dots = dotsContainer.querySelectorAll('span');
-
-    function updateDots() {
-      dots.forEach((dot, i) => {
-        dot.classList.toggle('active', i === projIndex);
-      });
-    }
-
-    function goToImage(index) {
-      projIndex = index;
-      inner.style.transform = `translateX(-${wrapperWidth * index}px)`;
-      updateDots();
-      resetTimer();
-    }
-
-    function nextImage() {
-      projIndex = (projIndex + 1) % total;
-      goToImage(projIndex);
-    }
-
-    let timer = setInterval(nextImage, 5000);
-
-    function resetTimer() {
-      clearInterval(timer);
-      timer = setInterval(nextImage, 5000);
-    }
-
-    goToImage(0);
-  });
-
-  // ➤ Certificate Carousel
-  const container = document.getElementById('certsContainer');
-  const prevBtn = document.getElementById('prevBtn');
-  const nextBtn = document.getElementById('nextBtn');
-
-
-  function setInitialPosition() {
-    const offset = (container.parentElement.offsetWidth / 2) - (cardWidth / 2);
-    container.style.transition = "none";
-    container.style.transform = `translateX(${-certIndex * cardWidth + offset}px)`;
-    updateActiveCard();
-  }
-
-  function updateScroll(animated = true) {
-    const offset = (container.parentElement.offsetWidth / 2) - (cardWidth / 2);
-    container.style.transition = animated ? "transform 0.4s ease" : "none";
-    container.style.transform = `translateX(${-certIndex * cardWidth + offset}px)`;
-    updateActiveCard();
-  }
-
-  function updateActiveCard() {
-    Array.from(allCards).forEach((card, index) => {
-      card.classList.toggle('active', index === certIndex);
-    });
-  }
-
-  function scrollNext() {
-    certIndex++;
-    updateScroll();
-    if (certIndex === updatedTotal - 1) {
-      setTimeout(() => {
-        certIndex = 1;
-        updateScroll(false);
-      }, 400);
-    }
-  }
-
-  function scrollPrev() {
-    certIndex--;
-    updateScroll();
-    if (certIndex === 0) {
-      setTimeout(() => {
-        certIndex = totalCards;
-        updateScroll(false);
-      }, 400);
-    }
-  }
-
-  nextBtn.addEventListener('click', () => {
-    scrollNext();
-    stopAutoScroll();
-  });
-
-  prevBtn.addEventListener('click', () => {
-    scrollPrev();
-    stopAutoScroll();
-  });
-
-  // Auto-scroll logic
-  let autoScroll = setInterval(scrollNext, 5000);
-
-  function stopAutoScroll() {
-    clearInterval(autoScroll);
-    autoScroll = null;
-  }
-
-  // Initial setup after page loads
-  window.addEventListener('load', () => {
-    setInitialPosition();
+    // Show clicked section
+    document.getElementById(targetId).classList.add('active');
   });
 });
+
+// ========== PROJECTS SLIDER ==========
+// Function to init carousel for all projects
+document.querySelectorAll('.project-card').forEach(card => {
+  const track = card.querySelector('.project-images-inner');
+  const images = track.querySelectorAll('img');
+  const dotsContainer = card.querySelector('.dots');
+
+  let currentIndex = 0;
+  let total = images.length;
+
+  // Create dots dynamically
+  dotsContainer.innerHTML = '';
+  images.forEach((_, i) => {
+    const dot = document.createElement('span');
+    dot.classList.add('dot');
+    if (i === 0) dot.classList.add('active');
+    dotsContainer.appendChild(dot);
+  });
+  const dots = dotsContainer.querySelectorAll('.dot');
+
+  // Function to go to a specific slide
+  function goToSlide(index) {
+    track.style.transform = `translateX(-${index * 100}%)`;
+    dots.forEach(d => d.classList.remove('active'));
+    dots[index].classList.add('active');
+  }
+
+  // Auto slide
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % total;
+    goToSlide(currentIndex);
+  }, 5000); // Change every 3 seconds
+});
+
+
+window.addEventListener('resize', updateProjectSlider);
+
+// ========== CERTIFICATES CAROUSEL ==========
+const certTrack = document.querySelector('.certificate-track');
+const certCards = document.querySelectorAll('.certificate-card');
+const certPrev = document.querySelector('.certificate-prev');
+const certNext = document.querySelector('.certificate-next');
+
+let certIndex = 0;
+
+function updateCertSlider() {
+  const cardWidth = certCards[0].offsetWidth + 20;
+  certTrack.style.transform = `translateX(-${certIndex * cardWidth}px)`;
+}
+
+if (certNext) {
+  certNext.addEventListener('click', () => {
+    if (certIndex < certCards.length - 1) {
+      certIndex++;
+      updateCertSlider();
+    }
+  });
+}
+
+if (certPrev) {
+  certPrev.addEventListener('click', () => {
+    if (certIndex > 0) {
+      certIndex--;
+      updateCertSlider();
+    }
+  });
+}
+
+window.addEventListener('resize', updateCertSlider);
+
+// ========== INITIAL LOAD ==========
+updateProjectSlider();
+updateCertSlider();
+
