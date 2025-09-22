@@ -21,7 +21,6 @@
   <meta name="twitter:description" content="Explore Dhana Raju's projects and web skills.">
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/x-icon" href="assets/images/logo.png">
-  <script defer src="scripts.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
@@ -47,123 +46,152 @@
 
 <!-- ======= HERO SECTION ======= -->
 <main>
- <section id="home" class="hero-section active section " data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
-
-  <!-- Background Slider -->
-      <div class="bg-slide active" style="background-image: url('assets/bgimages/Background.jpg');"></div>
-      <div class="bg-slide" style="background-image: url('assets/bgimages/Background2.avif');"></div>
-      <div class="bg-slide" style="background-image: url('assets/bgimages/Background3.avif');"></div>
-
-    <div class="hero-wrapper">
-      <!-- Left: Content -->
-      <div class="hero-content" data-aos="fade-right">
-        <h1>Hi, I'm Illa Dhana Raju 👋</h1>
-        <p id="role-text" class="animated-role"><span class="cursor">|</span></p>
-        <div class="social-icons">
-          <a href="https://linkedin.com/in/dhana-raju-illa-8906842a8" target="_blank"><i class="fab fa-linkedin"></i></a>
-          <a href="https://github.com/ILLA-DHANA-RAJU" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="https://mail.google.com/mail/?view=cm&to=illadhanaraju@gmail.com&su=Hello%20Raju" target="_blank"><i class="fas fa-envelope"></i></a>
-          <a href="assets/resume/Dhana_raju_CV.pdf" download><i class="fas fa-download"></i></a>
+  <section id="home" class="hero-section active section">
+        <!-- Particle Background -->
+        <div id="particles-js"></div>
+        
+        <!-- Background Slides -->
+        <div class="bg-slide active" style="background-image: url('https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=2000&q=80');"></div>
+        <div class="bg-slide" style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=2000&q=80');"></div>
+        <div class="bg-slide" style="background-image: url('https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=2000&q=80');"></div>
+        <div class="bg-slide" style="background-image: url('/assets/bgimages/Background2.avif');"></div>
+        
+        <!-- Floating elements -->
+        <div class="floating-elements">
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
         </div>
-      </div>
 
-      <!-- Right: Flippable Profile Image -->
-      <div class="hero-image-wrapper" data-aos="fade-left">
-        <div class="flip-card">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <img src="assets/images/DSC_0220.jpg" alt="Dhana Raju" class="profile-img" />
+        <div class="hero-wrapper">
+            <!-- Left: Content -->
+            <div class="hero-content">
+                <h1>Hi, I'm Illa Dhana Raju 👋</h1>
+                <p id="role-text" class="animated-role"><span class="cursor">|</span></p>
+                
+                <div class="social-icons">
+                    <a href="https://linkedin.com/in/dhana-raju-illa-8906842a8" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/ILLA-DHANA-RAJU" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="mailto:illadhanaraju@gmail.com"><i class="fas fa-envelope"></i></a>
+                    <a href="/assets/resume/Dhana_Raju_CV.pdf"><i class="fas fa-download"></i></a>
+                </div>
+                
+                <div class="cta-buttons">
+                    <a href="#projects" id="projectsBtn" class="cta-btn cta-primary"><i class="fas fa-code"></i> View My Work</a>
+                    <a href="#contact" id="contactBtn" class="cta-btn cta-secondary"><i class="fas fa-paper-plane"></i> Contact Me</a>
+                </div>
             </div>
-            <div class="flip-card-back">
-              <h2>About Me</h2>
-              <p>Creative & Passionate Developer</p>
-              <p>Loves building web apps 🚀</p>
+
+            <!-- Right: Flippable Profile Image -->
+            <div class="hero-image-wrapper">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="/assets/images/DSC_0220.jpg" alt="Dhana Raju">
+                        </div>
+                        <div class="flip-card-back">
+                            <h2>About Me</h2>
+                            <p>Creative & Passionate Developer</p>
+                            <p>Loves building web apps 🚀</p>
+                            <p>ML & IoT Enthusiast</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-
-    <!-- Services Section inside Home -->
-    <div class="hero-services" data-aos="fade-up">
-      <h2>My Services</h2>
-      <div class="services-grid">
-        <div class="service-card">
-          <i class="fas fa-code"></i>
-          <h3>Web Development</h3>
-          <p>Building responsive, fast, and secure web apps.</p>
-        </div>
-        <div class="service-card">
-          <i class="fas fa-mobile-alt"></i>
-          <h3>Full Stack Development</h3>
-          <p>End-to-End full web site with smooth UI & UX.</p>
-        </div>
-        <div class="service-card">
-          <i class="fas fa-database"></i>
-          <h3>Backend Solutions</h3>
-          <p>Scalable APIs & database design.</p>
-        </div>
-      </div>
-    </div>
-
-  </section>
+     </section>
 
     <!-- Empty sections for next steps -->
     <section id="about" class="about-section section">
-      <div class="about-container" >
-        <div class="about-image">
-          <img src="assets/images/DSC_0220.jpg" alt="Raju Profile">
+        <div class="about-container">
+            <div class="about-image">
+                <div class="image-container">
+                    <div class="rotating-border"></div>
+                    <div class="rotating-border-2"></div>
+                    <div class="floating-elements">
+                        <div class="floating-element"></div>
+                        <div class="floating-element"></div>
+                        <div class="floating-element"></div>
+                        <div class="floating-element"></div>
+                    </div>
+                    <img src="/assets/images/DSC_0220.jpg" alt="Dhana Raju Profile">
+                </div>
+            </div>
+            
+            <div class="about-content">
+                <h2>About Me</h2>
+                <p>
+                    I'm <b style="background: linear-gradient(90deg, #00c6ff, #0072ff); -webkit-background-clip: text; background-clip: text; color: transparent; font-weight: 700;">Dhana Raju</b>, a passionate Full Stack Developer and Machine Learning enthusiast. 
+                    I build interactive web apps and smart solutions using HTML, CSS, JS, Python, and more. 
+                    I love turning complex problems into simple, beautiful interfaces.
+                </p>
+                <p>
+                    I'm always exploring new technologies and constantly improving myself through internships, real-time projects, and open-source contributions.
+                </p>
+            </div>
         </div>
-        <div class="about-content">
-          <h2>About Me</h2>
-          <p>
-            I'm <b style="color: #3dbdc8ff">Dhana Raju</b>, a passionate Full Stack Developer and Machine Learning enthusiast. 
-            I build interactive web apps and smart solutions using HTML, CSS, JS, Python, and more. 
-            I love turning complex problems into simple, beautiful interfaces.
-          </p>
-          <p>
-            I’m always exploring new technologies and constantly improving myself through internships, real-time projects, and open-source contributions.
-          </p>
+
+        <!-- Services Section inside About -->
+        <div class="hero-services">
+            <h2>My Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Web Development</h3>
+                    <p>Building responsive, fast, and secure web applications with modern technologies.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Full Stack Development</h3>
+                    <p>End-to-End full web development with smooth UI & UX experiences.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-database"></i>
+                    <h3>Backend Solutions</h3>
+                    <p>Scalable APIs & database design with optimized performance.</p>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
 
     <!-- Education section -->
     <section id="Education" class="education-section section">
-      <h2>About My Studies</h2>
-      <div class="container-box education-content"> 
-        <!-- B.Tech Card -->
-        <div class="timeline-item left" >
-          <div class="card-container">
-            <h3>B.Tech - Computer Science and Engineering</h3>
-            <hr class="section-block">
-            <div class="content-block">
-              <p stlye="text-align: center"><strong>College:</strong> VSM College of Engineering, Ramachandrapuram</p>
-              <p><strong>University:</strong> JNTUK</p>
-              <p><strong>Year:</strong> 2021 - 2025</p>
-              <p><strong>CGPA:</strong> 62%</p>
-              <p><strong>Final Year Projects:</strong> Heart Rate Monitoring System, Crypto Price Prediction</p>
-              <p><strong>College Profile link: </strong><a href="https://www.vsm.edu.in/" target="_blank" alt="V.S.M College of Engineering Web site here">V.S.M College of Engineering </a>
-                <strong> 👈🏻 Click Here</strong></p>
+        <h2>About My Studies</h2>
+        <div class="education-content"> 
+            <!-- B.Tech Card -->
+            <div class="timeline-item left">
+                <div class="card-container">
+                    <h3><div class="icon-wrapper"><i class="fas fa-graduation-cap"></i></div> B.Tech - Computer Science and Engineering</h3>
+                    <hr class="section-block">
+                    <div class="content-block">
+                        <p><strong>College:</strong> VSM College of Engineering, Ramachandrapuram</p>
+                        <p><strong>University:</strong> JNTUK</p>
+                        <p><strong>Year:</strong> 2021 - 2025</p>
+                        <p><strong>CGPA:</strong> 62%</p>
+                        <p><strong>Final Year Projects:</strong> Heart Rate Monitoring System, Crypto Price Prediction</p>
+                        <p><strong>College Profile:</strong> <a href="https://www.vsm.edu.in/" target="_blank">V.S.M College of Engineering <i class="fas fa-external-link-alt"></i></a></p>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-        <!-- Intermediate Card -->
-        <div class="timeline-item right" data-aos="fade-up">
-          <div class="card-container">
-            <h3>Intermediate - MPC</h3>
-            <hr class="section-block">
-            <div class="content-block">
-              <p><strong>College:</strong> Pratibha Junior College</p>
-              <p><strong>Year:</strong> 2019 - 2021</p>
-              <p><strong>Percentage:</strong> 68%</p>
-              <p><strong>Board:</strong> BIEAP (Andhra Pradesh)</p>
+            
+            <!-- Intermediate Card -->
+            <div class="timeline-item right">
+                <div class="card-container">
+                    <h3><div class="icon-wrapper"><i class="fas fa-book"></i></div> Intermediate - MPC</h3>
+                    <hr class="section-block">
+                    <div class="content-block">
+                        <p><strong>College:</strong> Pratibha Junior College</p>
+                        <p><strong>Year:</strong> 2019 - 2021</p>
+                        <p><strong>Percentage:</strong> 68%</p>
+                        <p><strong>Board:</strong> BIEAP (Andhra Pradesh)</p>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </section>
+
     
     <!-- Skills section -->
     <section id="skills" class="skills-section section">
@@ -172,44 +200,46 @@
         <div class="skill-group">
           <h3 class="group-title">Web & Frameworks</h3>
           <div class="inner-tech">
-            <p>HTML</p>
-            <p>CSS</p>
-            <p>JavaScript</p>
-            <p>React</p>
+            <div class="inner-tech">
+              <p><i class="fab fa-html5 skill-icon" style="color: #e34f26;"></i> HTML</p>
+              <p><i class="fab fa-css3-alt skill-icon" style="color: #264de4;"></i> CSS</p>
+              <p><i class="fab fa-js-square skill-icon" style="color: #f7df1e;"></i> JavaScript</p>
+              <p><i class="fab fa-react skill-icon" style="color: #61dafb;"></i> React</p>
+            </div>
           </div>
         </div>
         <div class="skill-group">
           <h3 class="group-title">Backend Technologies</h3>
           <div class="inner-tech">
-            <p>Python</p>
-            <p>Django</p>
-            <p>Flask</p>
+            <p><i class="fab fa-python skill-icon" style="color: #3776ab;"></i> Python</p>
+            <p><i class="fas fa-code skill-icon" style="color: #092e20;"></i> Django</p>
+            <p><i class="fas fa-flask skill-icon" style="color: #000000;"></i> Flask</p>
           </div>
         </div>
 
         <div class="skill-group">
           <h3 class="group-title">Databases</h3>
           <div class="inner-tech">
-            <p>MySQL</p>
-            <p>SQLite</p>
+              <p><i class="fas fa-database skill-icon" style="color: #00758f;"></i> MySQL</p>
+              <p><i class="fas fa-database skill-icon" style="color: #003b57;"></i> SQLite</p>
           </div>
         </div>
 
         <div class="skill-group">
           <h3 class="group-title">Tools</h3>
           <div class="inner-tech">
-            <p>Git</p>
-            <p>GitHub</p>
-            <p>VS Code</p>
+            <p><i class="fab fa-git-alt skill-icon" style="color: #f05032;"></i> Git</p>
+            <p><i class="fab fa-github skill-icon" style="color: #181717;"></i> GitHub</p>
+            <p><i class="fas fa-code skill-icon" style="color: #007acc;"></i> VS Code</p>
           </div>
         </div>
 
         <div class="skill-group">
           <h3 class="group-title">Soft Skills</h3>
           <div class="inner-tech">
-            <p>Problem Solving</p>
-            <p>Communication</p>
-            <p>Teamwork</p>
+            <p><i class="fas fa-puzzle-piece skill-icon" style="color: #17a2b8;"></i> Problem Solving</p>
+            <p><i class="fas fa-comments skill-icon" style="color: #28a745;"></i> Communication</p>
+            <p><i class="fas fa-users skill-icon" style="color: #6f42c1;"></i> Teamwork</p>
           </div>
         </div>
       </div>
@@ -221,86 +251,134 @@
     <div class="projects-container">
       <!-- Project 1 -->
       <div class="project-images-wrapper">
-        <div class="project-card">
-          <div class="project-images carousel">
-            <div class="project-images-inner">
-              <img src="assets/images/portfolio1.png" alt="img loading...">
-              <img src="assets/images/portfolio2.png" alt="img loading...">
-              <img src="assets/images/portfolio3.png" alt="img loading...">
-              <img src="assets/images/portfolio4.png" alt="img loading...">
-              <img src="assets/images/portfolio5.png" alt="img loading...">
-            </div>
-          </div>
-          <div class="dots"></div>
-          <h3>Portfolio</h3>
-          <p>This portfolio is made by using of Html, CSS, JavaScript and Flask to showcase all of my skills.</p>
-          <span class="tag">Python</span><span class="tag">Flask</span>
-          <div class="project-links">
-            <a href="https://github.com/ILLA-DHANA-RAJU/Portfolio.git" target="blank" alt="Loading wait a moment"><button>Git hub link</button></a>
-          </div>
-        </div>
-      </div>
+              <div class="project-card">
+                <a href="https://github.com/ILLA-DHANA-RAJU/Portfolio.git" class="project-link" target="_blank">
+                    <div class="project-images">
+                        <div class="project-images-inner">
+                            <img src="assets/images/portfolio1.png" alt="img loading...">
+                            <img src="assets/images/portfolio2.png" alt="img loading...">
+                            <img src="assets/images/portfolio3.png" alt="img loading...">
+                            <img src="assets/images/portfolio4.png" alt="img loading...">
+                            <img src="assets/images/portfolio5.png" alt="img loading...">
+                        </div>
+                        <div class="dots">
+                            <span class="active"></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Portfolio Website</h3>
+                        <p>This portfolio is made using HTML, CSS, JavaScript and Flask to showcase all of my skills and projects in an interactive way.</p>
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Flask</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                        <div class="project-link-text">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
       <!-- Project 2 -->
       <div class="project-images-wrapper">
-        <div class="project-card"> 
-          <div class="project-images carousel">
-            <div class="project-images-inner">
-              <img src="assets/images/crypto1.png" alt="img loading...">
-              <img src="assets/images/crypto2.png" alt="img loading...">
-              <img src="assets/images/crypto3.png" alt="img loading...">
-              <img src="assets/images/crypto4.png" alt="img loading...">
-              <img src="assets/images/crypto5.png" alt="img loading...">
+        <div class="project-card">
+                <a href="#" class="project-link" target="_blank">
+                    <div class="project-images">
+                        <div class="project-images-inner">
+                          <img src="assets/images/crypto1.png" alt="img loading...">
+                          <img src="assets/images/crypto2.png" alt="img loading...">
+                          <img src="assets/images/crypto3.png" alt="img loading...">
+                          <img src="assets/images/crypto4.png" alt="img loading...">
+                          <img src="assets/images/crypto5.png" alt="img loading...">
+                        </div>
+                        <div class="dots">
+                            <span class="active"></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Crypto Price Prediction</h3>
+                        <p>Used ML & LSTM models to predict BTC, ETH, and LTC prices with 7-day forecasting. Visualized results and generated investment insights.</p>
+                        <div class="tags">
+                            <span class="tag">ML</span>
+                            <span class="tag">LSTM</span>
+                            <span class="tag">Matplotlib</span>
+                        </div>
+                        <div class="project-link-text">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </div>
+                    </div>
+                </a>
+              </div>
             </div>
-          </div>
-          <div class="dots"></div>
-          <h3>Crypto Price Prediction</h3>
-          <p>Used ML & LSTM models to predict BTC, ETH, and LTC prices with 7-day forecasting. Visualized results and generated investment insights.</p>
-          <span class="tag">ML</span><span class="tag">LSTM</span><span class="tag">Matplotlib</span>
-          <div class="project-links">
-            <a href="" targe="_blank" alt=""><button>Git hub link</button></a>
-          </div>
-        </div>
-      </div>
       <!-- Project 3 -->
       <div class="project-images-wrapper">
         <div class="project-card">
-          <div class="project-images carousel">
-            <div class="project-images-inner">
-              <img src="assets/images/pulse1.jpg" alt="img loading...">
-              <img src="assets/images/pulse2.png" alt="img loading...">
-              <img src="assets/images/pulse3.png" alt="img loading...">
-              <img src="assets/images/pulse4.png" alt="img loading...">
-              <img src="assets/images/pulse5.png" alt="img loading...">
+          <a href="https://github.com/ILLA-DHANA-RAJU/IOT-Project-on-health-assessment.git" class="project-link" target="_blank">
+                    <div class="project-images">
+                        <div class="project-images-inner">
+                          <img src="assets/images/pulse1.jpg" alt="img loading...">
+                          <img src="assets/images/pulse2.png" alt="img loading...">
+                          <img src="assets/images/pulse3.png" alt="img loading...">
+                          <img src="assets/images/pulse4.png" alt="img loading...">
+                          <img src="assets/images/pulse5.png" alt="img loading...">
+                        </div>
+                        <div class="dots">
+                            <span class="active"></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Heart Rate Monitoring System</h3>
+                        <p>Developed a real-time health monitoring system using Arduino, Pulse Sensor, and ThingSpeak, integrated with a Flask web app to display BPM and health status.</p>
+                        <div class="tags">
+                            <span class="tag">IoT</span>
+                            <span class="tag">Flask</span>
+                            <span class="tag">ThingSpeak</span>
+                        </div>
+                        <div class="project-link-text">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </div>
+                    </div>
+                </a>
+              </div>
             </div>
-          </div>
-          <div class="dots"></div>
-          <h3>Heart Rate Monitoring System</h3>
-          <p>Developed a real-time health monitoring system using Arduino, Pulse Sensor, and ThingSpeak, integrated with a Flask web app to display BPM and health status.</p>
-          <span class="tag">IoT</span><span class="tag">Flask</span><span class="tag">ThingSpeak</span>
-          <div class="project-links">
-            <a href="https://github.com/ILLA-DHANA-RAJU/IOT-Project-on-health-assessment.git" target="blank"><button>Git hub link</button></a>
-          </div>
-        </div>
-      </div>
       <!-- Project 4 -->
       <div class="project-images-wrapper">
         <div class="project-card">
-          <div class="project-images carousel">
-            <div class="project-images-inner">
-              <img src="assets/images/covide1.png" alt="img loading...">
-              <img src="assets/images/covide2.png" alt="img loading...">
-              <img src="assets/images/covide3.png" alt="img loading...">
-              <img src="assets/images/covide4.png" alt="img loading...">
-              <img src="assets/images/covide5.png" alt="img loading...">
-            </div>
-          </div>
-          <div class="dots"></div>
-          <h3>Covid Testing Management</h3>
-          <p>Full-stack web app built during internship at VSM College. Managed test records, reports, and admin dashboard with secure login.</p>
-          <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">PHP</span>
-          <div class="project-links">
-            <a href="#" alt="This is not avalible"><button>Git hub link</button></a>
-          </div>
+          <a href="#" class="project-link" target="_blank">
+            <div class="project-images">
+              <div class="project-images-inner">
+                <img src="assets/images/covide1.png" alt="img loading...">
+                <img src="assets/images/covide2.png" alt="img loading...">
+                <img src="assets/images/covide3.png" alt="img loading...">
+                <img src="assets/images/covide4.png" alt="img loading...">
+                <img src="assets/images/covide5.png" alt="img loading...">
+              </div>
+              <div class="dots">
+                <span class="active"></span>
+                  <span></span>
+                  <span></span>
+              </div>
+              </div>
+              <div class="project-content">
+                <h3>Covid Testing Management</h3>
+                <p>Full-stack web app built during internship at VSM College. Managed test records, reports, and admin dashboard with secure login.</p>
+                <div class="tags">
+                  <span class="tag">HTML</span>
+                  <span class="tag">CSS</span>
+                  <span class="tag">PHP</span>
+                </div>
+                <div class="project-link-text">
+                  <i class="fab fa-github"></i> View on GitHub
+                </div>
+              </div>
+          </a>
         </div>
       </div>
     </div>
@@ -351,66 +429,138 @@
     </section>
 
     <!-- Resume section -->
-    <section id="resume" class="resume-section section">
-      <h2>My Resume</h2>
-      <div class="resume-wrapper" data-aos="fade-up">
-        <iframe src="assets/resume/Dhana_Raju_Developer.pdf" frameborder="0"></iframe>
-        <div class="resume-actions">
-          <a href="assets/resume/Dhana_Raju_Developer.pdf" target="_blank" class="btn view-btn">View Fullscreen</a>
-          <a href="assets/resume/Dhana_Raju_Developer.pdf" download class="btn download-btn">Download PDF</a>
+      <section id="resume" class="resume-section section">
+        <h2>My Resume</h2>
+        
+        <div class="resume-icon" id="resumeIcon">
+            <i class="fas fa-file-pdf"></i>
+            <p>Click to view my resume</p>
         </div>
-      </div>
-    </section>
+        
+        <div class="resume-wrapper" id="resumeWrapper">
+            <div class="close-resume" id="closeResume">
+                <i class="fas fa-times"></i>
+            </div>
+            
+            <div class="resume-preview" id="resumePreview">
+                <iframe src="/assets/resume/Dhana_raju_Resume.pdf" frameborder="0"></iframe>
+                <div class="expand-toggle" id="expandToggle">
+                    <i class="fas fa-expand"></i>
+                </div>
+                <div class="close-expanded" id="closeExpanded">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+            
+            <div class="resume-actions">
+                <a href="/assets/resume/Dhana_raju_Resume.pdf" target="_blank" class="btn view-btn">
+                    <i class="fas fa-external-link-alt"></i> View Fullscreen
+                </a>
+                <a href="#" class="btn download-btn">
+                    <i class="fas fa-download"></i> Download PDF
+                </a>
+            </div>
+        </div>  
+        <div class="overlay" id="overlay"></div>
+      </section>
     
     <!-- Contact form section -->
-    <section id="contact" class="contact-section section">
-    <h2>Contact Me</h2>
-    <div class="contact-wrapper">
-      <div class="contact-info" data-aos="fade-right">
-        <p>If you’d like to work with me or just say hello, reach out:</p>
-        <h3>Email:<a href="https://mail.google.com/mail/?view=cm&to=illadhanaraju@gmail.com&su=Hello%20Raju&body=Enter%20your%20opinion." target="_blank">illadhanaraju@gmail.com</a></h3>
-        <div class="social-icons">
-          <a href="https://linkedin.com/in/dhana-raju-illa-8906842a8" target="_blank"><i class="fab fa-linkedin"></i></a>
-          <a href="https://github.com/ILLA-DHANA-RAJU" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="https://mail.google.com/mail/?view=cm&to=illadhanaraju@gmail.com&su=Hello%20Raju&body=Enter%20your%20opinion." target="_blank"><i class="fas fa-envelope"></i></a>
+ <section id="contact" class="contact-section section">
+      <h2>Contact Me</h2>
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <p>If you'd like to work with me or just say hello, feel free to reach out. I'm always open to discussing new projects and opportunities.</p>
+                <h3><i class="fas fa-envelope"></i> Email: <a href="https://mail.google.com/mail/?view=cm&to=illadhanaraju@gmail.com&su=Hello%20Raju&body=Enter%20your%20opinion." target="_blank">illadhanaraju@gmail.com</a></h3>
+                <div class="social-icons">
+                    <a href="https://linkedin.com/in/dhana-raju-illa-8906842a8" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/ILLA-DHANA-RAJU" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://mail.google.com/mail/?view=cm&to=illadhanaraju@gmail.com&su=Hello%20Raju&body=Enter%20your%20opinion." target="_blank" title="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <form id="contactForm" action="https://formspree.io/f/mldbqngk" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+                <div class="form-success" id="formSuccess">
+                    <i class="fas fa-check-circle"></i> Thank you! Your message has been sent.
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="contact-form" data-aos="fade-right">
-        <form id="contactForm" action="https://formspree.io/f/mldbqngk" method="POST">
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="email" name="email" placeholder="Your Email" required>
-          <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-          <button type="submit">Send Message</button>
-        </form>
-      </div> 
-    </div>
-  </section>
+    </section>
 </main>
 <hr class="section-divider">
-<footer class="footer">
-  <div class="footer-content">
-    <p><i>&copy; 2025 Dhana Raju. All Rights Reserved.</i></p>
-  </div>
-  <div class="social-icon items">
-    <a href="https://linkedin.com/in/dhana-raju-illa-8906842a8" target="_blank"><i class="fab fa-linkedin"></i></a>
-    <a href="https://github.com/ILLA-DHANA-RAJU" target="_blank"><i class="fab fa-github"></i></a>
-    <a href="" target="_blank"><i class="fab fa-twitter"></i></a>
-  </div>
-</footer>
-
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand fade-up">
+                <h3>Dhana Raju</h3>
+                <p>Full Stack Developer & ML Enthusiast passionate about creating innovative solutions and exploring new technologies.</p>
+                <div class="social-icon">
+                    <a href="https://linkedin.com/in/dhana-raju-illa-8906842a8" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/ILLA-DHANA-RAJU" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://twitter.com" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://mail.google.com/mail/?view=cm&to=illadhanaraju@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links fade-up">
+                <h4>Quick Links</h4>
+                <a href="#home"><i class="fas fa-chevron-right"></i> Home</a>
+                <a href="#projects"><i class="fas fa-chevron-right"></i> Projects</a>
+                <a href="#skills"><i class="fas fa-chevron-right"></i> Skills</a>
+                <a href="#education"><i class="fas fa-chevron-right"></i> Education</a>
+                <a href="#certifications"><i class="fas fa-chevron-right"></i> Certifications</a>
+                <a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a>
+            </div>
+            
+            <div class="footer-referral fade-up">
+                <h4>Referral Opportunity</h4>
+                <p>I'm actively seeking new opportunities in software development. If you know of any openings or would be willing to refer me, I'd greatly appreciate it!</p>
+                <a href="https://mail.google.com/mail/?view=cm&to=illadhanaraju@gmail.com&su=Referral%20Opportunity&body=Hello%20Dhana,%20I'd%20like%20to%20refer%20you%20for%20an%20opportunity." 
+                   target="_blank" class="referral-btn">Refer Me</a>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p><i class="fas fa-copyright"></i> 2025 Dhana Raju. All Rights Reserved.</p>
+            <div class="footer-legal">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="https://mail.google.com/mail/?view=cm&to=illadhanaraju@gmail.com">Contact</a>
+            </div>
+        </div>
+    </footer>
+    <script defer src="scripts.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init({
     duration: 1000,
     once: true
   });
+
+  // Stub for setInitialPosition (you can add real logic later)
+  function setInitialPosition() {
+    // Example: just logging to confirm page load
+    console.log('setInitialPosition called - placeholder');
+  }
+
+  // Stub for updateProjectSlider (you can implement slider logic later)
+  function updateProjectSlider() {
+      // Example: just logging for now
+      console.log('updateProjectSlider called - placeholder');
+  }
+  
   function toggleMenu() {
-  document.getElementById("navMenu").classList.toggle("show");
-  document.querySelector(".hamburger").classList.toggle("open");
-}
+    document.getElementById("navMenu").classList.toggle("show");
+    document.querySelector(".hamburger").classList.toggle("open");
+  }
   // Initial setup after page loads
   window.addEventListener('load', () => {
     setInitialPosition();
+    updateProjectSlider();
   });
    function openModal(src) {
     document.getElementById("modalImg").src = src;
@@ -439,10 +589,6 @@
 
   setInterval(changeSlide, 5000);
 
-  function toggleMenu() {
-    document.getElementById("navMenu").classList.toggle("active");
-  }
-
   // Close menu when clicking outside
   document.addEventListener("click", function(event) {
     const navMenu = document.getElementById("navMenu");
@@ -452,10 +598,209 @@
       navMenu.classList.remove("active");
     }
   });
-</script>
+
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const successMessage = document.getElementById('formSuccess');
+      successMessage.style.display = 'block';
+      this.reset();
+      setTimeout(() => { successMessage.style.display = 'none'; }, 5000);
+    });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const resumeIcon = document.getElementById('resumeIcon');
+    const resumeWrapper = document.getElementById('resumeWrapper');
+    const closeResume = document.getElementById('closeResume');
+    const resumePreview = document.getElementById('resumePreview');
+    const expandToggle = document.getElementById('expandToggle');
+    const closeExpanded = document.getElementById('closeExpanded');
+    const overlay = document.getElementById('overlay');
+    
+    // Show resume when icon is clicked
+    resumeIcon.addEventListener('click', function() {
+        resumeWrapper.classList.add('active');
+        document.getElementById('resume').scrollIntoView({ 
+            behavior: 'smooth' 
+        });
+    });
+    
+    // Close resume section
+    closeResume.addEventListener('click', function() {
+        resumeWrapper.classList.remove('active');
+        // Also close expanded view if open
+        if (resumePreview.classList.contains('expanded')) {
+            closePreview();
+        }
+    });
+    
+    // Expand resume preview
+    expandToggle.addEventListener('click', function() {
+        resumePreview.classList.add('expanded');
+        overlay.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    });
+    
+    // Close expanded preview
+    closeExpanded.addEventListener('click', closePreview);
+    overlay.addEventListener('click', closePreview);
+    
+    // Close with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            if (resumePreview.classList.contains('expanded')) {
+                closePreview();
+            } else if (resumeWrapper.classList.contains('active')) {
+                resumeWrapper.classList.remove('active');
+            }
+        }
+    });
+    
+    function closePreview() {
+        resumePreview.classList.remove('expanded');
+        overlay.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+    
+    // Simulate download (would be your actual PDF in production)
+    document.querySelector('.download-btn').addEventListener('click', function(e) {
+        e.preventDefault();
+        alert('Download functionality would be implemented with your actual PDF file.');
+    });
+  });
+  // Add fade-up animation when elements come into view
+  document.addEventListener('DOMContentLoaded', function() {
+    const fadeElements = document.querySelectorAll('.fade-up');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            }
+        });
+    }, { threshold: 0.1 });
+    
+    fadeElements.forEach(element => {
+        observer.observe(element);
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+  });
+  // Add intersection observer for animations
+  document.addEventListener('DOMContentLoaded', function() {
+    const aboutImage = document.querySelector('.about-image');
+    const aboutContent = document.querySelectorAll('.about-content p');
+    const serviceCards = document.querySelectorAll('.service-card');
+    
+    // Initialize animations
+    setTimeout(() => {
+        aboutImage.style.animationPlayState = 'running';
+        aboutContent.forEach(p => p.style.animationPlayState = 'running');
+    }, 300);
+    
+    // Add scroll animations for service cards
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, { threshold: 0.2 });
+    
+    // Set initial state for service cards
+    serviceCards.forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(30px)';
+        card.style.transition = 'all 0.6s ease';
+        observer.observe(card);
+    });
+    
+    // Add hover effect for profile image
+    const profileImg = document.querySelector('.about-image img');
+    profileImg.addEventListener('mouseenter', () => {
+        document.querySelector('.rotating-border').style.animationDuration = '2s';
+        document.querySelector('.rotating-border-2').style.animationDuration = '3s';
+    });
+    
+    profileImg.addEventListener('mouseleave', () => {
+        document.querySelector('.rotating-border').style.animationDuration = '4s';
+        document.querySelector('.rotating-border-2').style.animationDuration = '6s';
+    });
+  });
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            targetElement.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    });
+  });
+  function showSection(sectionId) {
+  // Hide all sections first
+  document.querySelectorAll('.section').forEach(sec => {
+    sec.classList.remove('active');
+  });
+
+  // Show the selected section
+  const target = document.getElementById(sectionId);
+  if (target) target.classList.add('active');
+
+  // Scroll into view
+  target.scrollIntoView({ behavior: 'smooth' });
+}
+
+// ====== Navbar links ======
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    const targetId = this.getAttribute('href').replace('#', '');
+    showSection(targetId);
+  });
+});
+
+  // ====== Hero / CTA buttons ======
+  document.getElementById('projectsBtn')?.addEventListener('click', function(e){
+    e.preventDefault();
+    showSection('projects');
+  });
+
+  document.getElementById('contactBtn')?.addEventListener('click', function(e){
+    e.preventDefault();
+    showSection('contact');
+  });
+  function showSection(sectionId) {
+  document.querySelectorAll('.section').forEach(sec => {
+    if(sec.id !== 'hero') sec.classList.remove('active');
+  });
+
+  const target = document.getElementById(sectionId);
+  if (target) target.classList.add('active');
+  target.scrollIntoView({ behavior: 'smooth' });
+}
 
 
 
 </script>
+
 </body>
 </html>

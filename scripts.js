@@ -39,19 +39,7 @@ const roles = [
   }
   typeEffect()
 
-// ========== SECTION SWITCHING ==========
-document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', function(e) {
-    e.preventDefault();
-    const targetId = this.getAttribute('href').substring(1);
 
-    // Hide all sections
-    document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
-
-    // Show clicked section
-    document.getElementById(targetId).classList.add('active');
-  });
-});
 
 // ========== PROJECTS SLIDER ==========
 // Function to init carousel for all projects
@@ -126,4 +114,3 @@ window.addEventListener('resize', updateCertSlider);
 // ========== INITIAL LOAD ==========
 updateProjectSlider();
 updateCertSlider();
-
