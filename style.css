@@ -312,7 +312,7 @@ main {
    height: 100%; 
    top: 0; 
    left: 0; 
-   z-index: 2; 
+   z-index: 3; 
    pointer-events: none; 
 }
 .floating-element {
@@ -322,12 +322,17 @@ main {
     border-radius: 50%;
     background: linear-gradient(45deg, #00c6ff, #0072ff);
     animation: float 6s ease-in-out infinite;
+    z-index: 3; 
 }
 
 .floating-element:nth-child(1) { top: 20%; left: 10%; animation-delay: 0s; }
 .floating-element:nth-child(2) { top: 60%; left: 5%; animation-delay: 2s; }
 .floating-element:nth-child(3) { top: 30%; right: 10%; animation-delay: 4s; }
 .floating-element:nth-child(4) { top: 70%; right: 5%; animation-delay: 1s; }
+.floating-element:nth-child(5) { top: 50%; left: 50%; animation-delay: 3s; }
+.floating-element:nth-child(6) { top: 80%; left: 80%; animation-delay: 5s; }
+
+
 
 /* SCROLL INDICATOR */
 .scroll-indicator {
@@ -377,26 +382,28 @@ main {
 
 /* About Section */
 
-.about-section h2 {
-    margin-top: 10%;
-}
-
 .about-container {
-    max-width: 1100px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    gap: 60px;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    align-items: center;
+  max-width: 1100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  align-items: center;
 }
-
 .about-content {
     flex: 1;
     min-width: 300px;
 }
-
+.about-content-inner{
+    position: relative;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    animation: fadeInLeft 1.5s ease forwards;
+    opacity: 0;
+    z-index: 2;
+}
 .about-content p {
     font-size: 1.1rem;
     line-height: 1.7;
@@ -411,7 +418,7 @@ main {
 }
 
 .about-content p:nth-child(3) {
-    animation-delay: 0.6s;
+    animation-delay: 0.3s;
 }
 
 .about-image {
@@ -422,6 +429,7 @@ main {
     position: relative;
     animation: fade-up 1.5s ease forwards;
     opacity: 0;
+    margin-top: 30px;
 }
 
 .image-container {
@@ -438,8 +446,6 @@ main {
     width: 340px;
     height: 340px;
     border-radius: 50%;
-    background: conic-gradient(transparent, #00c6ff, transparent, #0072ff, transparent);
-    animation: rotateGlow 4s linear infinite;
     z-index: 0;
     filter: blur(8px);
 }
@@ -449,8 +455,6 @@ main {
     width: 360px;
     height: 360px;
     border-radius: 50%;
-    background: conic-gradient(transparent, #0072ff, transparent, #00c6ff, transparent);
-    animation: rotateGlow 6s linear infinite reverse;
     z-index: 0;
     filter: blur(6px);
     opacity: 0.7;
@@ -476,7 +480,6 @@ main {
 
 .floating-elements {
     position: absolute;
-    width: 100%;
     height: 100%;
     z-index: 1;
 }
@@ -490,37 +493,12 @@ main {
     animation: float 6s ease-in-out infinite;
 }
 
-.floating-element:nth-child(1) {
-    top: 10%;
-    left: 10%;
-    width: 15px;
-    height: 15px;
-    animation-delay: 0s;
-}
-
-.floating-element:nth-child(2) {
-    top: 20%;
-    right: 15%;
-    width: 12px;
-    height: 12px;
-    animation-delay: 1s;
-}
-
-.floating-element:nth-child(3) {
-    bottom: 15%;
-    left: 15%;
-    width: 18px;
-    height: 18px;
-    animation-delay: 2s;
-}
-
-.floating-element:nth-child(4) {
-    bottom: 10%;
-    right: 10%;
-    width: 10px;
-    height: 10px;
-    animation-delay: 3s;
-}
+.floating-element:nth-child(1) { top: 20%; left: 10%; animation-delay: 0s; }
+.floating-element:nth-child(2) { top: 60%; left: 5%; animation-delay: 2s; }
+.floating-element:nth-child(3) { top: 30%; right: 10%; animation-delay: 4s; }
+.floating-element:nth-child(4) { top: 70%; right: 5%; animation-delay: 1s; }
+.floating-element:nth-child(5) { top: 50%; left: 50%; animation-delay: 3s; }
+.floating-element:nth-child(6) { top: 80%; left: 80%; animation-delay: 5s; }
 
 /* Services Section */
 .hero-services {
@@ -667,7 +645,7 @@ main {
     }
 }
 
-/* Main Skills Section */
+
 /* ================== Skills Section ================== */
 
 /* Container for all skill groups */
@@ -1866,38 +1844,97 @@ main {
 
 
 @media (max-width: 1150px) {
-  /* 🌐 Navbar */
-  .nav-links {
-      display: none;
-  }
+
   
    header#navbar {
     flex-wrap: wrap;
-    padding: 15px 20px;
-  }
+   }
+ 
+  /* Hamburger container */
+  /* Hamburger lines */
+.hamburger {
+  width: 30px;
+  height: 22px;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 1001;
+}
 
-  .hamburger {
-    display: block;
-    z-index: 1001;
-  }
+.hamburger div {
+  height: 3px;
+  background: rgb(11, 11, 11);
+  border-radius: 5px;
+  transition: all 0.4s ease;
+}
+
+/* Hamburger open → cross */
+.hamburger.open div:nth-child(1) {
+  transform: rotate(60deg) translate(9px, 5px);
+}
+
+.hamburger.open div:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open div:nth-child(3) {
+  transform: rotate(-50deg) translate(5px, -6px);
+}
+
+/* Optional hover */
+.hamburger:hover div {
+  background: #050505;
+}
+
 
   .nav-links {
-    position: absolute;
-    top: 15px;
-    right: 50px;
-    color: white;
-    background: rgba(244, 241, 241, 0.921);
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
-    z-index: 999;
-    max-width: 300px;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(1px);
+  position: absolute;
+  top: 55px;
+  right: 30px;
+  color: white;
+  background: rgba(244, 241, 241, 0.95); /* light transparent bg */
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  z-index: 999;
+  max-width: 300px;
+  opacity: 0;
+  pointer-events: none; /* prevent clicking when hidden */
+  transform: translateY(-20px);
+  transition: all 0.4s ease;
+  backdrop-filter: blur(10px); /* nice glass effect */
   }
+
+  /* When menu is active / open */
+  .nav-links.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  /* Each link animation (stagger effect optional) */
+  .nav-links a {
+    margin: 10px 0;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover {
+    color: #0077ff;
+  }
+
+  /* Hamburger open state - can rotate or transform into cross */
+  .hamburger.open {
+    transform: rotate(-10deg);
+    transition: all 0.4s ease;
+  }
+
 
   .nav-links a {
     display: block;
@@ -2123,23 +2160,18 @@ main {
 
 @media (max-width: 900px) {
    .about-container {
-        flex-direction: column;
-        text-align: center;
-        gap: 40px;
+      flex-direction: column;
+      text-align: center;
+      gap: 5px;
     }
     
     .about-content h2:after {
-        left: 50%;
-        transform: translateX(-50%);
+      left: 50%;
+      transform: translateX(-50%);
     }
     
     .services-grid {
         gap: 20px;
-    }
-    
-    .service-card {
-        width: 100%;
-        max-width: 350px;
     }
   .footer-content{
     gap: 50px;
@@ -2223,11 +2255,17 @@ main {
     flex-wrap: wrap;
     padding: 15px 20px;
   }
-
   .hamburger {
-    display: block;
+  width: 20px;
+  height: 15px;
+  }
+  .hamburger.open div:nth-child(1) {
+    transform: rotate(60deg) translate(-0px, 5px);
   }
 
+  .hamburger.open div:nth-child(3) {
+    transform: rotate(-50deg) translate(5px, -10px)
+  }
   .nav-links a {
     display: block;
     margin: 10px 0;
@@ -2561,10 +2599,6 @@ main {
   /* 🌐 Navbar */
   header#navbar {
     padding: 15px 20px;
-  }
-
-  .hamburger {
-    display: block;
   }
 
   .nav-links a {

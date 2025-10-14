@@ -42,7 +42,12 @@
       <a href="#contact">Contact</a>
     </nav>
     <div class="Download"><strong><a href="assets/resume/Dhana_raju_CV.pdf" target="_blank" style="text-decoration: none; color:black"><i class="fas fa-download"></i> Download CV</a></strong></div>
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
+     <!-- Hamburger container -->
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
   </header>
 
 <!-- ======= HERO SECTION ======= -->
@@ -55,35 +60,32 @@
         <div class="bg-slide active" style="background-image: url('https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=2000&q=80');"></div>
         <div class="bg-slide" style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=2000&q=80');"></div>
         <div class="bg-slide" style="background-image: url('https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=2000&q=80');"></div>
-        <div class="bg-slide" style="background-image: url('assets/bgimages/Background2.avif');"></div>
-        
+        <div class="bg-slide" style="background-image: url('assets/bgimages/Background2.avif');"></div>      
         <!-- Floating elements -->
         <div class="floating-elements">
             <div class="floating-element"></div>
             <div class="floating-element"></div>
             <div class="floating-element"></div>
             <div class="floating-element"></div>
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
         </div>
-
         <div class="hero-wrapper">
             <!-- Left: Content -->
             <div class="hero-content">
                 <h1>Hi, I'm Illa Dhana Raju 👋</h1>
-                <p id="role-text" class="animated-role"><span class="cursor">|</span></p>
-                
+                <p id="role-text" class="animated-role"><span class="cursor">|</span></p>          
                 <div class="social-icons">
-                    <a href="https://linkedin.com/in/dhana-raju-illa-8906842a8" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://linkedin.com/in/dhanarajuiilla" target="_blank"><i class="fab fa-linkedin"></i></a>
                     <a href="https://github.com/ILLA-DHANA-RAJU" target="_blank"><i class="fab fa-github"></i></a>
                     <a href="mailto:illadhanaraju@gmail.com"><i class="fas fa-envelope"></i></a>
                     <a href="./assets/resume/Dhana_Raju_CV.pdf"><i class="fas fa-download"></i></a>
-                </div>
-                
+                </div>          
                 <div class="cta-buttons">
                     <a href="#projects" id="projectsBtn" class="cta-btn cta-primary"><i class="fas fa-code"></i> View My Work</a>
                     <a href="#contact" id="contactBtn" class="cta-btn cta-secondary"><i class="fas fa-paper-plane"></i> Contact Me</a>
                 </div>
             </div>
-
             <!-- Right: Flippable Profile Image -->
             <div class="hero-image-wrapper">
                 <div class="flip-card">
@@ -110,29 +112,31 @@
                 <div class="image-container">
                     <div class="rotating-border"></div>
                     <div class="rotating-border-2"></div>
-                    <div class="floating-elements">
-                        <div class="floating-element"></div>
-                        <div class="floating-element"></div>
-                        <div class="floating-element"></div>
-                        <div class="floating-element"></div>
-                    </div>
                     <img src="assets/images/DSC_0220.jpg" alt="Dhana Raju Profile">
                 </div>
-            </div>
-            
+            </div>  
             <div class="about-content">
-                <h2>About Me</h2>
-                <p>
-                    I'm <b style="background: linear-gradient(90deg, #00c6ff, #0072ff); -webkit-background-clip: text; background-clip: text; color: transparent; font-weight: 700;">Dhana Raju</b>, a passionate Full Stack Developer and Machine Learning enthusiast. 
-                    I build interactive web apps and smart solutions using HTML, CSS, JS, Python, and more. 
-                    I love turning complex problems into simple, beautiful interfaces.
-                </p>
-                <p>
-                    I'm always exploring new technologies and constantly improving myself through internships, real-time projects, and open-source contributions.
-                </p>
+              <div class="floating-elements">
+                <div class="floating-element"></div>
+                <div class="floating-element"></div>
+                <div class="floating-element"></div>
+                <div class="floating-element"></div>
+                <div class="floating-element"></div>
+                <div class="floating-element"></div>
+              </div>
+              <div class"about-content-inner">
+                  <h2>About Me</h2>
+                  <p>
+                      I'm <b style="background: linear-gradient(90deg, #00c6ff, #0072ff); -webkit-background-clip: text; background-clip: text; color: transparent; font-weight: 700;">Dhana Raju</b>, a passionate Full Stack Developer and Machine Learning enthusiast. 
+                      I build interactive web apps and smart solutions using HTML, CSS, JS, Python, and more. 
+                      I love turning complex problems into simple, beautiful interfaces.
+                  </p>
+                  <p>
+                      I'm always exploring new technologies and constantly improving myself through internships, real-time projects, and open-source contributions.
+                  </p>
+              </div>
             </div>
-        </div>
-
+          </div>
         <!-- Services Section inside About -->
         <div class="hero-services">
             <h2>My Services</h2>
@@ -156,7 +160,6 @@
         </div>
     </section>
 
-
     <!-- Education section -->
     <section id="Education" class="education-section section">
         <h2>About My Studies</h2>
@@ -175,8 +178,7 @@
                         <p><strong>College Profile:</strong> <a href="https://www.vsm.edu.in/" target="_blank">V.S.M College of Engineering <i class="fas fa-external-link-alt"></i></a></p>
                     </div>
                 </div>
-            </div>
-            
+            </div>     
             <!-- Intermediate Card -->
             <div class="timeline-item right">
                 <div class="card-container">
@@ -192,7 +194,6 @@
             </div>
         </div>
     </section>
-
     
     <!-- Skills section -->
     <section id="skills" class="skills-section section">
@@ -253,7 +254,7 @@
       <!-- Project 1 -->
       <div class="project-images-wrapper">
               <div class="project-card">
-                <a href="https://github.com/ILLA-DHANA-RAJU/Portfolio.git" class="project-link" target="_blank">
+                <a href="https://portfolio-1pyp.onrender.com/" class="project-link" target="_blank">
                     <div class="project-images">
                         <div class="project-images-inner">
                             <img src="assets/images/portfolio1.png" alt="img loading...">
@@ -286,7 +287,7 @@
       <!-- Project 2 -->
       <div class="project-images-wrapper">
         <div class="project-card">
-                <a href="#" class="project-link" target="_blank">
+                <a href="https://github.com/ILLA-DHANA-RAJU/Crypto_currency_Project.git" class="project-link" target="_blank">
                     <div class="project-images">
                         <div class="project-images-inner">
                           <img src="assets/images/crypto1.png" alt="img loading...">
@@ -391,6 +392,16 @@
       <div class="certs-wrapper" data-aos="fade-right">
         <div class="certs-container" id="certsContainer">
           <div class="cert-card">
+            <img src="assets/certificates/Freecodecamp.png" alt="IoT Internship Certificate" onclick="openModal(this.src)">
+            <h3>Web development - freecodecamp</h3>
+            <p>Completed tasks and getting certification from freecodecamp on responsive web development</p>
+          </div>
+          <div class="cert-card">
+            <img src="assets/certificates/AI.jpg" alt="IoT Internship Certificate" onclick="openModal(this.src)">
+            <h3>Fundmental of AI - Ocean Apps Technologies</h3>
+            <p>3-months training classes on Fundamentals on AI of ML and DL basics .</p>
+          </div>
+          <div class="cert-card">
             <img src="assets/certificates/NPTEL Certificate.png" alt="NPTEL Certificate" onclick="openModal(this.src)">
             <h3>NPTEL - The Joy of Computing using Python</h3>
             <p>Issued by NPTEL | Score: 56%</p>
@@ -404,16 +415,6 @@
             <img src="assets/certificates/Web developmen in college.jpg" alt="Full Stack Internship Certificate" onclick="openModal(this.src)">
             <h3>Full Stack Development Internship</h3>
             <p>Developed a Covid Testing System at VSM College.</p>
-          </div>
-          <div class="cert-card">
-            <img src="assets/certificates/AI.jpg" alt="IoT Internship Certificate" onclick="openModal(this.src)">
-            <h3>Fundmental of AI - Ocean Apps Technologies</h3>
-            <p>3-months training classes on Fundamentals on AI of ML and DL basics .</p>
-          </div>
-          <div class="cert-card">
-            <img src="assets/certificates/Freecodecamp.png" alt="IoT Internship Certificate" onclick="openModal(this.src)">
-            <h3>Web development - freecodecamp</h3>
-            <p>Completed tasks and getting certification from freecodecamp on responsive web development</p>
           </div>
           <div class="cert-card">
             <img src="assets/certificates/IBM.png" alt="IoT Internship Certificate" onclick="openModal(this.src)">
@@ -444,7 +445,7 @@
             </div>
             
             <div class="resume-preview" id="resumePreview">
-                <iframe src="./assets/resume/Dhana_Raju_Resume.pdf" frameborder="0"></iframe>
+                <iframe src="./assets/resume/Illa_Dhana_Raju_Resume.pdf" frameborder="0"></iframe>
                 <div class="expand-toggle" id="expandToggle">
                     <i class="fas fa-expand"></i>
                 </div>
@@ -454,7 +455,7 @@
             </div>
             
             <div class="resume-actions">
-                <a href="./assets/resume/Dhana_Raju_Resume.pdf" target="_blank" class="btn view-btn">
+                <a href="./assets/resume/Illa_Dhana_Raju_Resume.pdf" target="_blank" class="btn view-btn">
                     <i class="fas fa-external-link-alt"></i> View Fullscreen
                 </a>
                 <a href="#" class="btn download-btn">
@@ -466,14 +467,14 @@
       </section>
     
     <!-- Contact form section -->
- <section id="contact" class="contact-section section">
+    <section id="contact" class="contact-section section">
       <h2>Contact Me</h2>
         <div class="contact-wrapper">
             <div class="contact-info">
                 <p>If you'd like to work with me or just say hello, feel free to reach out. I'm always open to discussing new projects and opportunities.</p>
                 <h3><i class="fas fa-envelope"></i> Email: <a href="https://mail.google.com/mail/?view=cm&to=illadhanaraju@gmail.com&su=Hello%20Raju&body=Enter%20your%20opinion." target="_blank">illadhanaraju@gmail.com</a></h3>
                 <div class="social-icons">
-                    <a href="https://linkedin.com/in/dhana-raju-illa-8906842a8" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://linkedin.com/in/dhanarajuilla" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
                     <a href="https://github.com/ILLA-DHANA-RAJU" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
                     <a href="https://mail.google.com/mail/?view=cm&to=illadhanaraju@gmail.com&su=Hello%20Raju&body=Enter%20your%20opinion." target="_blank" title="Email"><i class="fas fa-envelope"></i></a>
                 </div>
@@ -500,7 +501,7 @@
                 <h3>Dhana Raju</h3>
                 <p>Full Stack Developer & ML Enthusiast passionate about creating innovative solutions and exploring new technologies.</p>
                 <div class="social-icon">
-                    <a href="https://linkedin.com/in/dhana-raju-illa-8906842a8" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://linkedin.com/in/dhanarajuilla" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
                     <a href="https://github.com/ILLA-DHANA-RAJU" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
                     <a href="https://twitter.com" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
                     <a href="https://mail.google.com/mail/?view=cm&to=illadhanaraju@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a>
@@ -510,21 +511,19 @@
             <div class="footer-links fade-up">
                 <h4>Quick Links</h4>
                 <a href="#home"><i class="fas fa-chevron-right"></i> Home</a>
-                <a href="#projects"><i class="fas fa-chevron-right"></i> Projects</a>
+                <a href="#Education"><i class="fas fa-chevron-right"></i> Education</a>
                 <a href="#skills"><i class="fas fa-chevron-right"></i> Skills</a>
-                <a href="#education"><i class="fas fa-chevron-right"></i> Education</a>
+                <a href="#projects"><i class="fas fa-chevron-right"></i> Projects</a>
                 <a href="#certifications"><i class="fas fa-chevron-right"></i> Certifications</a>
                 <a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a>
-            </div>
-            
+            </div>    
             <div class="footer-referral fade-up">
                 <h4>Referral Opportunity</h4>
                 <p>I'm actively seeking new opportunities in software development. If you know of any openings or would be willing to refer me, I'd greatly appreciate it!</p>
                 <a href="https://mail.google.com/mail/?view=cm&to=illadhanaraju@gmail.com&su=Referral%20Opportunity&body=Hello%20Dhana,%20I'd%20like%20to%20refer%20you%20for%20an%20opportunity." 
                    target="_blank" class="referral-btn">Refer Me</a>
             </div>
-        </div>
-        
+        </div>       
         <div class="footer-bottom">
             <p><i class="fas fa-copyright"></i> 2025 Dhana Raju. All Rights Reserved.</p>
             <div class="footer-legal">
@@ -540,72 +539,108 @@
     duration: 1000,
     once: true
   });
+// Stub for setInitialPosition (you can add real logic later)
+function setInitialPosition() {
+  console.log('setInitialPosition called - placeholder');
+}
 
-  // Stub for setInitialPosition (you can add real logic later)
-  function setInitialPosition() {
-    // Example: just logging to confirm page load
-    console.log('setInitialPosition called - placeholder');
-  }
+// Stub for updateProjectSlider (you can implement slider logic later)
+function updateProjectSlider() {
+  console.log('updateProjectSlider called - placeholder');
+}
 
-  // Stub for updateProjectSlider (you can implement slider logic later)
-  function updateProjectSlider() {
-      // Example: just logging for now
-      console.log('updateProjectSlider called - placeholder');
-  }
-  
-  function toggleMenu() {
-    document.getElementById("navMenu").classList.toggle("show");
-    document.querySelector(".hamburger").classList.toggle("open");
-  }
-  // Initial setup after page loads
-  window.addEventListener('load', () => {
-    setInitialPosition();
-    updateProjectSlider();
-  });
-   function openModal(src) {
-    document.getElementById("modalImg").src = src;
-    document.getElementById("certModal").style.display = "block";
-  }
+// Navbar toggle (hamburger to cross)
+function toggleMenu() {
+  const navMenu = document.getElementById("navMenu");
+  const hamburger = document.querySelector(".hamburger");
 
-  function closeModal() {
-    document.getElementById("certModal").style.display = "none";
-  }
+  navMenu.classList.toggle("show");
+  hamburger.classList.toggle("open");
+}
 
-  // Optional: close modal on outside click
-  window.onclick = function(event) {
-    const modal = document.getElementById("certModal");
-    if (event.target === modal) {
-      modal.style.display = "none";
+// Close menu when clicking outside
+document.addEventListener("click", function (e) {
+  const navMenu = document.getElementById("navMenu");
+  const hamburger = document.querySelector(".hamburger");
+
+  if (
+    navMenu.classList.contains("show") &&
+    !navMenu.contains(e.target) &&
+    !hamburger.contains(e.target)
+  ) {
+    navMenu.classList.remove("show");
+    hamburger.classList.remove("open");
+  }
+});
+
+// Initial setup after page loads
+window.addEventListener('load', () => {
+  setInitialPosition();
+  updateProjectSlider();
+});
+
+// Modal open/close for certifications
+function openModal(src) {
+  document.getElementById("modalImg").src = src;
+  document.getElementById("certModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("certModal").style.display = "none";
+}
+
+// Optional: close modal on outside click
+window.onclick = function(event) {
+  const modal = document.getElementById("certModal");
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+};
+
+// Background slider logic
+const slides = document.querySelectorAll('.bg-slide');
+let current = 0;
+
+function changeSlide() {
+  slides[current].classList.remove('active');
+  current = (current + 1) % slides.length;
+  slides[current].classList.add('active');
+}
+
+setInterval(changeSlide, 5000);
+
+const form = document.getElementById('contactForm');
+const successMessage = document.getElementById('formSuccess');
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault(); // stop default submission
+
+  const formData = new FormData(form); // collect form data
+
+  fetch(form.action, {
+    method: form.method,
+    body: formData,
+    headers: {
+      'Accept': 'application/json'
     }
-  };
-  const slides = document.querySelectorAll('.bg-slide');
-  let current = 0;
-
-  function changeSlide() {
-    slides[current].classList.remove('active');
-    current = (current + 1) % slides.length;
-    slides[current].classList.add('active');
-  }
-
-  setInterval(changeSlide, 5000);
-
-  // Close menu when clicking outside
-  document.addEventListener("click", function(event) {
-    const navMenu = document.getElementById("navMenu");
-    const hamburger = document.querySelector(".hamburger");
-
-    if (!navMenu.contains(event.target) && !hamburger.contains(event.target)) {
-      navMenu.classList.remove("active");
-    }
-  });
-
-  document.getElementById('contactForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const successMessage = document.getElementById('formSuccess');
-      successMessage.style.display = 'block';
-      this.reset();
+  })
+  .then(response => {
+    if (response.ok) {
+      successMessage.style.display = 'block'; // show success
+      form.reset(); // clear form
       setTimeout(() => { successMessage.style.display = 'none'; }, 5000);
-    });
+    } else {
+      response.json().then(data => {
+        alert("Oops! There was a problem: " + (data.errors ? data.errors.map(e => e.message).join(", ") : "Unknown error"));
+      });
+    }
+  })
+  .catch(error => {
+    alert("Oops! There was a problem submitting your form.");
+    console.error(error);
+  });
+});
+
 
   document.addEventListener('DOMContentLoaded', function() {
     const resumeIcon = document.getElementById('resumeIcon');
@@ -796,8 +831,30 @@ document.querySelectorAll('.nav-links a').forEach(link => {
   const target = document.getElementById(sectionId);
   if (target) target.classList.add('active');
   target.scrollIntoView({ behavior: 'smooth' });
-}
 
+}
+<!-- ✅ Working JS for Quick Links -->
+
+document.addEventListener("DOMContentLoaded", function () {
+  const footerLinks = document.querySelectorAll(".footer-links a");
+
+  footerLinks.forEach(link => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      const targetId = this.getAttribute("href").replace("#", "");
+      const targetElement = document.getElementById(targetId);
+
+      // If showSection() exists in your JS, use it
+      if (typeof showSection === "function") {
+        showSection(targetId);
+      } else if (targetElement) {
+        // Otherwise smooth scroll to the section
+        targetElement.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+  });
+});
 
 
 </script>
